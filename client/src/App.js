@@ -1,24 +1,25 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    componentDidMount() {
+        console.log("Inside componentDidMount!");
+        fetch("/api/v1/test-servlet")
+          .then((response) => response.text())
+          .then((text) => {
+        console.log("here is the text from servlet: ", text);
+      });
+    }
+
+    render() {
+        return (
+          <div className="App">
+            <div className="App-header">
+              <h2>Welcome to React</h2>
+            </div>
+          </div>
+        );
+    }
 }
 
 export default App;
