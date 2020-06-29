@@ -5,15 +5,15 @@ import './App.css';
 class App extends Component {
 
     constructor(props) {
-  super(props);
-  this.state = { text: "" };
-}
+        super(props);
+        this.state = { text: "" };
+    }
 
     componentDidMount() {
         fetch("/api/v1/test-servlet")
             .then((response) => response.text())
             .then((text) => {
-                this.setState({text});
+                this.setState({ text });
             });
     }
 
