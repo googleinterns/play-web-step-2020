@@ -1,23 +1,23 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen, wait } from '@testing-library/react';
 import { FetchMock } from '@react-mock/fetch';
 import App from './App';
 import { findRenderedComponentWithType } from 'react-dom/test-utils';
 
-const renderComponent = ({ text }) =>
+const renderComponent = () =>
 render(
     <FetchMock
-    mock={[
-        {matcher: '/api/v1/test-servlet', response: 200}
-    ]}
+    options={
+        {matcher: '/api/v1/test-servlet', method: 'GET', response: "Hello world"}
+    }
     >
+    <App />
     </FetchMock>
 );
 
 test('verifies fetch is called', async () => {
-    const { getByText } = findRenderedComponentWithType();
-    
-
+    const { getByText } = renderComponent();
+    await wait(() => expect(getByText("Hello world")).toBeInTheDocument());
 })
 
 test('loads and displays greeting', () => {
