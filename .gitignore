@@ -4,7 +4,8 @@ pom.xml.*
 release.properties
 .mvn/wrapper/maven-wrapper.jar
 
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# yarn generated files for linting
+node_modules/
 
 # Client dependencies
 client/node_modules
