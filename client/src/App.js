@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
 import RecommendedCategories from './components/cluster/RecommendedCategories/RecommendedCategories.js';
+import TopCharts from './Clusters/TopCharts/TopCharts.js';
+
 
 class App extends Component {
   constructor(props) {
@@ -22,9 +24,9 @@ class App extends Component {
           {this.state.text}
         </div>
         <RecommendedCategories />
+        <TopCharts />
       </div>
     )
   }
 }
-
 export default App;
