@@ -4,15 +4,15 @@ import { render, wait }from '@testing-library/react';
 import App from './App';
 
 const renderComponent = () =>
-  render(
-    <FetchMock
-      options={{
-  matcher: '/api/v1/test-servlet', method: 'GET', response: 'Hello world',
-      }}
-    >
-      <App />
-    </FetchMock>
-  )
+    render(
+        <FetchMock
+            options={{
+                matcher: '/api/v1/test-servlet', method: 'GET', response: 'Hello world',
+            }}
+        >
+            <App />
+        </FetchMock>
+    );
 
 test('verifies fetch is called', async () => {
     const { getByText } = renderComponent();

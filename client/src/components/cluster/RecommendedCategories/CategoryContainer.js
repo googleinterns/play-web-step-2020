@@ -7,19 +7,19 @@ class CategoryContainer extends Component {
 
         return (
             <>
-            <h6>{category}</h6>
-            <img
-              alt="Category Icon"
-              src={url} 
-            />
+              <h6>{category}</h6>
+              <img
+                alt="Category Icon"
+                src={url} 
+              />
             </>
         );
     }
 }
 
-CategoryComponent.propTypes = {
+export default CategoryContainer;
+
+CategoryContainer.propTypes = {
     category: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired
 };
-
-export default CategoryContainer;
