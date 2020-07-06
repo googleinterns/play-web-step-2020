@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import RecommendedCategories from './cluster/RecommendedCategories/RecommendedCategories.js';
+import RecommendedCategories from './components/cluster/RecommendedCategories/RecommendedCategories.js';
 
 class App extends Component {
   constructor(props) {

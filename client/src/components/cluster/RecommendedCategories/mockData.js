@@ -11,19 +11,23 @@ export const listOne = {
     cards: [
         {
             category: "Health & fitness",
-            url: healthAndFitnessIcon
+            url: healthAndFitnessIcon,
+            id: 1
         },
         {
             category: "Weather",
-            url: weatherIcon
+            url: weatherIcon,
+            id: 2
         },
         {
             category: "Productivity",
-            url: productivityIcon
+            url: productivityIcon,
+            id: 3
         },
         {
             category: "Communication",
-            url: communicationIcon
+            url: communicationIcon,
+            id: 4
         }
     ]
 };
@@ -32,19 +36,23 @@ export const listTwo = {
     cards: [
         {
             category: "Music & audio",
-            url: musicAndAudioIcon
+            url: musicAndAudioIcon,
+            id: 5
         },
         {
             category: "Educational",
-            url: educationalIcon
+            url: educationalIcon,
+            id: 6
         },
         {
             category: "Sports",
-            url: sportsIcon
+            url: sportsIcon,
+            id: 7
         },
         {
             category: "Maps & Navigation",
-            url: mapsAndNavigationIcon
+            url: mapsAndNavigationIcon,
+            id: 8
         }
     ]
 
