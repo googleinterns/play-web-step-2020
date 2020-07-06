@@ -1,6 +1,6 @@
-import './App.css'
-
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import './App.css';
+import RecommendedCategories from './cluster/RecommendedCategories/RecommendedCategories.js';
 
 class App extends Component {
   constructor(props) {
@@ -21,9 +21,10 @@ class App extends Component {
           <h2>Welcome to React</h2>
           {this.state.text}
         </div>
+        <RecommendedCategories />
       </div>
     )
   }
 }
 
-export default App
+export default App;
