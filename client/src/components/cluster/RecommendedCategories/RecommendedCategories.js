@@ -5,27 +5,29 @@ import { listOne, listTwo } from './mockData.js';
 class RecommendedCategories extends Component {
     render() {
         const makeRow = item => (
-            <CategoryContainer
+            <CategoryContainer key={item.id}
                 category={item.category}
                 url={item.url}
             />
         );
 
+        const lists = [listOne, listTwo];
+
         return (
             <div className="category-section">
-                <div class="section-header">
+                <div className="section-header">
                     <h2>Didn't find what you're looking for?</h2>
                     <h1>Browse recommended categories</h1>
                 </div>
 
-                {charts.map((value) => {
-                    return <div class="row">
-                        <div class="horizontal-row">
+                {lists.map((value, index) => {
+                    return <div className="row" key={index}>
+                        <div className="horizontal-row">
                             {value.cards.map(makeRow)}
                         </div>
                     </div>
                 })}
-                <h6>See all categories</h6>
+                <a href="https://play.google.com/">See all categories</a>
             </div>
         );
     }
