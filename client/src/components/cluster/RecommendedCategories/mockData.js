@@ -55,5 +55,4 @@ export const listTwo = {
             id: 8
         }
     ]
-
 };

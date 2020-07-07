@@ -5,7 +5,8 @@ import { listOne, listTwo } from './mockData.js';
 class RecommendedCategories extends Component {
     render() {
         const makeRow = item => (
-            <CategoryContainer key={item.id}
+            <CategoryContainer
+                key={item.id}
                 category={item.category}
                 url={item.url}
             />
@@ -21,11 +22,13 @@ class RecommendedCategories extends Component {
                 </div>
 
                 {lists.map((value, index) => {
-                    return <div className="row" key={index}>
-                        <div className="horizontal-row">
-                            {value.cards.map(makeRow)}
+                    return (
+                        <div className="row" key={index}>
+                            <div className="horizontal-row">
+                                {value.cards.map(makeRow)}
+                            </div>
                         </div>
-                    </div>
+                    );
                 })}
                 <a href="https://play.google.com/">See all categories</a>
             </div>
