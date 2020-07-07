@@ -22,7 +22,7 @@ class App extends Component {
         <div className='App-header'>
           <h2>Welcome to React</h2>
           {this.state.text}
-        </div>git 
+        </div>
         <TopCharts />
         <RecommendedCategories />
       </div>

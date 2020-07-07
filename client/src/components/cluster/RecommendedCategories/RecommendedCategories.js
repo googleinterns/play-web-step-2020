@@ -18,7 +18,7 @@ class RecommendedCategories extends Component {
             <div className="category-section">
                 <div className="section-header">
                     <h2>Didn't find what you're looking for?</h2>
-                    <h1>Browse recommended categories</h1>
+                    <a href="https://play.google.com/">Browse recommended categories</a>
                 </div>
 
                 {lists.map((value, index) => {
