@@ -14,11 +14,6 @@ const renderComponent = () =>
         </FetchMock>
     );
 
-test('verifies fetch is called', async () => {
-    const { getByText } = renderComponent();
-    await wait(() => expect(getByText("Hello world")).toBeInTheDocument());
-})
-
 test('loads and displays greeting', () => {
     const { getByText } = render(<App />);
     const textElement = getByText('Welcome to React');
