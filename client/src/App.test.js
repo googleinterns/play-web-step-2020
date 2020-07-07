@@ -1,5 +1,5 @@
 import React from 'react';
-import { render }from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
 
 test('loads and displays text from Top Charts', () => {
@@ -8,8 +8,8 @@ test('loads and displays text from Top Charts', () => {
     expect(textElement).toBeInTheDocument();
 });
 
-test('loads and displays text from Recommended Categories', () => {
+test('loads and displays greeting from Recommended Categories', () => {
     const { getByText } = render(<App />);
     const textElement = getByText('Browse recommended categories');
     expect(textElement).toBeInTheDocument();
-})
+});
