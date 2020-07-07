@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import TopCharts from './Clusters/TopCharts/TopCharts.js';
 import RecommendedCategories from './components/cluster/RecommendedCategories/RecommendedCategories.js';
+
 
 class App extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class App extends Component {
         <div className='App-header'>
           <h2>Welcome to React</h2>
           {this.state.text}
-        </div>
+        </div>git 
         <TopCharts />
         <RecommendedCategories />
       </div>
