@@ -1,21 +1,15 @@
 import React from 'react';
-import { FetchMock } from '@react-mock/fetch';
-import { render, wait }from '@testing-library/react';
+import { render }from '@testing-library/react';
 import App from './App';
 
-const renderComponent = () =>
-    render(
-        <FetchMock
-            options={{
-                matcher: '/api/v1/test-servlet', method: 'GET', response: 'Hello world',
-            }}
-        >
-            <App />
-        </FetchMock>
-    );
-
-test('loads and displays greeting', () => {
+test('loads and displays text from Top Charts', () => {
     const { getByText } = render(<App />);
-    const textElement = getByText('Welcome to React');
+    const textElement = getByText('Top Charts');
+    expect(textElement).toBeInTheDocument();
+});
+
+test('loads and displays text from Recommended Categories', () => {
+    const { getByText } = render(<App />);
+    const textElement = getByText('Browse recommended categories');
     expect(textElement).toBeInTheDocument();
 })
