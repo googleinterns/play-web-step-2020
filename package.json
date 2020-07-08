@@ -1,10 +1,19 @@
 {
+  "private": true,
+  "workspaces": ["client"],
   "dependencies": {
     "clang-format": "^1.4.0",
     "css-validator": "^0.9.0",
-    "eslint": "^7.3.1",
+    "eslint": "^6.6.0",
     "eslint-config-google": "^0.14.0",
     "html-validate": "^3.0.0",
     "prettier": "^2.0.5"
+  },
+  "scripts": {
+    "start": "yarn workspace client serve -s build",
+    "local": "yarn workspace client local",
+    "build": "yarn workspace client build",
+    "test": "yarn workspace client test",
+    "eject": "yarn workspace client eject"
   }
 }

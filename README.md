@@ -17,11 +17,22 @@ with clusters of apps. There will be several different kinds of clusters, such a
 - App Engine (computing service)
 - Maven (build automation)
 
+## Build Depedencies
+
+- On the root directory, run `yarn`.
+
+## Steps to Run the Java Servet
+
+- On the root directory, run `mvn package appengine:run`.
+
 ## Steps to Run the React App
-1. Open the terminal and cd into ~/play-web-step-2020/client
-2. Run the command yarn local 
-3. Open a seperate terminal and cd into ~/play-web-step-2020
-4. Run the command mvn package appengine:run
-5. Click on the web preview icon and change the port to the last four numbers listed in the terminal 
- Local:            http://localhost:####
-6. Your new tab should now run the react app
+
+1. In a separate terminal from the Java Servlet, run `yarn local`.
+2. Click on the web preview icon and change the port to the last four numbers listed in the terminal.
+   - Local: http://localhost:####
+3. Your new tab should now show the React app.
+
+## Tests
+
+1. For client tests, run `yarn test`.
+2. For server tests, run `TBD`.
