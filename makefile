@@ -4,9 +4,6 @@ ESLINT=node_modules/eslint/bin/eslint.js
 HTML_VALIDATE=node_modules/html-validate/bin/html-validate.js
 PRETTIER=node_modules/prettier/bin-prettier.js
 
-node_modules:
-	yarn add clang-format prettier html-validate eslint eslint-config-google
-
 pretty: node_modules
     # Format HTML and CSS files
 	$(PRETTIER) --write src/main/webapp/*.{html,css} client/public/*.html client/src/*.css

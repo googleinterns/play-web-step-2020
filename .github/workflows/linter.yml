@@ -27,10 +27,7 @@ jobs:
       run: mvn package
     - name: Install Node dependencies
       if: always()
-      run: make node_modules
-    - name: Install subdirectory Node dependencies
-      if: always()
-      run: cd client; yarn
+      run: yarn
     - name: Validate HTML
       if: always()
       run: node_modules/html-validate/bin/html-validate.js src/main/webapp/*.html client/public/*.html
