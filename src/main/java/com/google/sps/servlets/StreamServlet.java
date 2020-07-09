@@ -39,9 +39,9 @@ public class StreamServlet extends HttpServlet {
     response.getWriter().println(jsonStream);  
   }
 
-  private String convertToJson(Stream list) {
+  private String convertToJson(Stream stream) {
     Gson gson = new Gson();
-    String json = gson.toJson(list);
+    String json = gson.toJson(stream);
     return json;
   }
 }
