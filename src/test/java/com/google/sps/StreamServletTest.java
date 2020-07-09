@@ -53,26 +53,21 @@ public final class StreamServletTest {
 
   @Before
   public void setUp() throws Exception {
-      
     //Create real StreamServlet object.
     servlet = new StreamServlet();
-
     stringWriter = new StringWriter();
     PrintWriter writer = new PrintWriter(stringWriter);
-    when(mockResponse.getWriter()).thenReturn(writer);
-    
+    when(mockResponse.getWriter()).thenReturn(writer);   
   }
 
   @Test
-  public void testDoGet() throws Exception {
-    
+  public void testDoGet() throws Exception { 
     servlet.doGet(mockRequest, mockResponse);
     verify(mockResponse, atLeast(1)).setContentType("application/json");
-    assertTrue(stringWriter.toString().contains("stream"));
 
     // Convert JSON File to Java Object
     Gson gson = new Gson();
-    Clusters testStream = gson.fromJson(servlet.jsonStream, Clusters.class);
+    Stream testStream = gson.fromJson(stringWriter.toString(), Stream.class);
 
     Assert.assertEquals(1, testStream.stream.size());
     Assert.assertEquals("Top Charts", testStream.stream.get(0).title);
@@ -81,5 +76,4 @@ public final class StreamServletTest {
     Assert.assertEquals(5, testStream.stream.get(0).charts.get(0).apps.get(1).rating, 0);
     Assert.assertEquals(3, testStream.stream.get(0).charts.get(1).apps.get(0).id);
   }
-
 }

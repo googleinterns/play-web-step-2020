@@ -1,10 +1,10 @@
 package com.google.sps.servlets;
 import java.util.ArrayList;
 
-public class Clusters{
+public class Stream {
     ArrayList<TopChartsCluster> stream = new ArrayList<TopChartsCluster>();
     
-    Clusters(){
+    Stream() {
         TopChartsCluster topCharts = new TopChartsCluster();
         stream.add(topCharts);
     }

@@ -28,18 +28,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/api/v1/cluster")
+@WebServlet("/api/v1/stream")
 public class StreamServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    Clusters stream = new Clusters();
+    Stream stream = new Stream();
     String jsonStream = convertToJson(stream);
     response.setContentType("application/json");
     response.getWriter().println(jsonStream);  
   }
 
-  private String convertToJson(Clusters list) {
+  private String convertToJson(Stream list) {
     Gson gson = new Gson();
     String json = gson.toJson(list);
     return json;
