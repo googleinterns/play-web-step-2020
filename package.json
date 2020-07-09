@@ -2,6 +2,7 @@
   "private": true,
   "workspaces": ["client"],
   "dependencies": {
+    "@material/card": "^7.0.0",
     "clang-format": "^1.4.0",
     "css-validator": "^0.9.0",
     "eslint": "^6.6.0",
