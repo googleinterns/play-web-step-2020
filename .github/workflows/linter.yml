@@ -30,7 +30,7 @@ jobs:
       run: yarn
     - name: Validate HTML
       if: always()
-      run: node_modules/html-validate/bin/html-validate.js src/main/webapp/*.html client/public/*.html
+      run: node_modules/html-validate/bin/html-validate.js client/public/*.html
     - name: Validate JavaScript
       if: always()
       run: node_modules/eslint/bin/eslint.js client/src/*.js
