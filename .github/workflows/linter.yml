@@ -33,16 +33,16 @@ jobs:
       run: node_modules/html-validate/bin/html-validate.js src/main/webapp/*.html client/public/*.html
     - name: Validate JavaScript
       if: always()
-      run: node_modules/eslint/bin/eslint.js src/main/webapp/*.js client/src/*.js
+      run: node_modules/eslint/bin/eslint.js client/src/*.js
     - name: Check HTML Style Formatting
       if: always()
-      run: node_modules/prettier/bin-prettier.js -c src/main/webapp/*.html client/public/*.html
+      run: node_modules/prettier/bin-prettier.js -c client/public/*.html
     - name: Check CSS Style Formatting
       if: always()
-      run: node_modules/prettier/bin-prettier.js -c src/main/webapp/*.css client/src/*.css
+      run: node_modules/prettier/bin-prettier.js -c client/src/*.css
     - name: Check JavaScript Style Formatting
       if: always()
-      run: node_modules/clang-format/bin/linux_x64/clang-format --style=Google src/main/webapp/*.js client/src/*.js
+      run: node_modules/clang-format/bin/linux_x64/clang-format --style=Google client/src/*.js
     - name: Check Java Style Formatting
       if: always()
       run: node_modules/clang-format/bin/linux_x64/clang-format --style=Google src/main/java/com/google/sps/servlets/*.java
