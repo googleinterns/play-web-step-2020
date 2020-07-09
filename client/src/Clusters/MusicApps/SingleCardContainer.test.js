@@ -5,41 +5,41 @@ import SingleCardContainer from './SingleCardContainer.js';
 const renderSingleCardContainer = () =>
     render(
         <SingleCardContainer 
-            bigImage="imageUrl"
-            title="testCardContainer"
-            iconUrl="testIconUrl"
-            rating=5
+            bigImage="http://imageurl.com"
+            title="test Card Container"
+            iconUrl="http://testiconurl.com"
+            rating={5}
             rated="Everyone"
             appDescription="this is a test"
         />
     );
 
 test('passes correct imageUrl', async () => {
-    const { getByText } = renderSingleCardContainer();
-    await wait(() => expect(getByText("imageUrl")).toBeInDocument()); 
+    const { getByAltText } = renderSingleCardContainer();
+    await expect(getByAltText("largeImage").src).toEqual("http://imageurl.com/"); 
 });
 
 test('passes correct title', async () => {
     const { getByText } = renderSingleCardContainer();
-    await wait(() => expect(getByText("testCardContainer")).toBeInDocument()); 
+    await expect(getByText("test Card Container")).toBeInTheDocument(); 
 });
 
 test('passes correct iconUrl', async () => {
-    const { getByText } = renderSingleCardContainer();
-    await wait(() => expect(getByText("testIconUrl")).toBeInDocument()); 
+    const { getByAltText } = renderSingleCardContainer();
+    await expect(getByAltText("appIcon").src).toEqual("http://testiconurl.com/"); 
 });
 
 test('passes correct rating', async () => {
     const { getByText } = renderSingleCardContainer();
-    await wait(() => expect(getByText("5")).toBeInDocument());     
+    await expect(getByText("5")).toBeInTheDocument();     
 });
 
 test('passes correct rated', async () => {
     const { getByText } = renderSingleCardContainer();
-    await wait(() => expect(getByText("Everyone")).toBeInDocument());     
+    await expect(getByText("Everyone")).toBeInTheDocument();     
 });
 
 test('passes correct appDescription', async () => {
     const { getByText } = renderSingleCardContainer();
-    await wait(() => expect(getByText("this is a test")).toBeInDocument());     
+    await expect(getByText("this is a test")).toBeInTheDocument();     
 });

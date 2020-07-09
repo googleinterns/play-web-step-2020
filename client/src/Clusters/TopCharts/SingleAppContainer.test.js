@@ -6,28 +6,28 @@ const renderSingleAppContainer = () =>
     render(
         <SingleAppContainer 
             listNum={1}
-            url={"testURL"}
-            title={"Test Title"}
-            category={"test"}
+            url="http://testurl.com"
+            title="Test Title"
+            category="test"
             rating={4.5} />
     );
 
-test('passes correct title', async () => {
+test('passes correct title', async() => {
     const { getByText } = renderSingleAppContainer();
-    await wait(() => expect(getByText("Test Title")).toBeInTheDocument());
+    await expect(getByText("Test Title")).toBeInTheDocument();
 });
 
-test('passes correct url', async () => {
-    const { getByText } = renderSingleAppContainer();
-    await wait(() => expect(getByText("testURL")).toBeInTheDocument());
+test('passes correct url', async() => {
+    const { getByAltText } = renderSingleAppContainer();
+    await expect(getByAltText("icon 1").src).toEqual("http://testurl.com/");
 });
 
-test('passes correct category', async () => {
+test('passes correct category', async() => {
     const { getByText } = renderSingleAppContainer();
-    await wait(() => expect(getByText("test")).toBeInTheDocument());
+    await expect(getByText("test - Category")).toBeInTheDocument();
 });
 
-test('passes correct rating', async () => {
+test('passes correct rating', async() => {
     const { getByText } = renderSingleAppContainer();
-    await wait(() => expect(getByText(4.6)).toBeInTheDocument());
+    await expect(getByText("4.5")).toBeInTheDocument();
 });

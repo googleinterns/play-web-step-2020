@@ -4,23 +4,22 @@ import starIcon from '../TopCharts/Images/starIcon.svg';
 
 class SingleCardContainer extends Component {
     render() {
-        const {bigImage, title, iconUrl, rating, rated, appDescription} = this.props;
+        const { bigImage, title, iconUrl, rating, rated, appDescription } = this.props;
         return (
-          <>
-            <img class="musicImage" alt="largeImage" src={bigImage} />
-            <div class="appCard">
-                <img class="img-fluid" alt="appIcon" src={iconUrl} />
-                <div class="app-details">
-                     <h3 class="app-title">{title}</h3>
-                     <div class="grey-text"> 
-                      {rating}
-                      <img class="rating-star-icon" alt="rating star" src={starIcon} />  
-                      {rated}
-                     </div>
-                     <p class="grey-text">{appDescription}</p>
+            <>
+                <img className="musicImage" alt="largeImage" src={bigImage} />
+                <div className="appCard">
+                    <img className="img-fluid" alt="appIcon" src={iconUrl} />
+                    <div className="app-details">
+                        <h3 className="app-title">{title}</h3>
+                        <p className="grey-text">{rating}
+                            <img className="rating-star-icon" alt="rating star" src={starIcon} />
+                            {rated}
+                        </p>
+                        <p className="grey-text">{appDescription}</p>
+                    </div>
                 </div>
-            </div>
-          </>
+            </>
         );
     }
 }

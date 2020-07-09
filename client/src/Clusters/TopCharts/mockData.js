@@ -146,7 +146,7 @@ export const topPaid = {
         rating: 4.6
       },
       {
-        appId: "34",
+        id: "34",
         listNum: 4,
         url: emptyAppImage,
         title: "App Name",

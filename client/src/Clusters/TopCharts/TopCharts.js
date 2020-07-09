@@ -7,7 +7,7 @@ import '../styles.css';
 class TopCharts extends Component {
   render() {
     const makeColumn = item => (
-        <div key={item.appId}>
+        <div key={item.id}>
             <SingleAppContainer
             listNum={item.listNum}
             url={item.url}
@@ -22,14 +22,14 @@ class TopCharts extends Component {
 
     return (
       <div className="section">
-        <div class="section-header">
+        <div className="section-header">
           <h1>Top Charts</h1>
           <h3>For Wear OS</h3>
         </div>
  
         {charts.map((value, index) => {
-            return <div class="col" key={index}>
-                        <div class="vertical-row">
+            return <div className="col" key={index}>
+                        <div className="vertical-row">
                             <h3>{value.title}</h3>
                             {value.cards.map(makeColumn)}
                         </div>

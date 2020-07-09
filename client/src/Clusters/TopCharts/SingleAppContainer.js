@@ -8,19 +8,19 @@ class SingleAppContainer extends Component {
 
     return (
       <>
-        <p class="num">{listNum}</p>
+        <p className="num">{listNum}</p>
         <img
-          class="img-fluid"
+          className="img-fluid"
           alt="icon 1"
           src={url}
         />
-        <div class="app-details">
-          <h3 class="app-title">{title}</h3>
-          <p class="grey-text">{category} - Category</p>
-          <p class="grey-text">
+        <div className="app-details">
+          <h3 className="app-title">{title}</h3>
+          <p className="grey-text">{category} - Category</p>
+          <p className="grey-text">
             {rating}
             <img
-              class="rating-star-icon"
+              className="rating-star-icon"
               alt="rating star"
               src= {starIcon}
             />

@@ -7,7 +7,7 @@ import {musicApps} from './MockData.js';
 class MusicApps extends Component {
     render() {
         const makeRow = item => (
-            <div key={item.appId}>
+            <div key={item.id}>
                 <SingleCardContainer
                 bigImage={item.wearOsImage}
                 title={item.title}
@@ -21,10 +21,10 @@ class MusicApps extends Component {
 
         return (
             <div className="section">
-                <div class="section-header">
+                <div className="section-header">
                     <h2>{musicApps.title}</h2>
                 </div>
-                <div class="col">
+                <div className="col">
                     {musicApps.cards.map(makeRow)}
                 </div>                
             </div>
