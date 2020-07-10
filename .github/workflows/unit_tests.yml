@@ -29,6 +29,9 @@ jobs:
     - name: Run client tests
       if: always()
       run: yarn test
+    - name: Run server tests
+      if: always()
+      run: mvn test
     - name: Notify on failure
       if: failure()
       run: echo 'run "yarn test" to see/fix errors locally'
