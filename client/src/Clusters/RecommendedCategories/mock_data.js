@@ -7,7 +7,7 @@ import productivityIcon from './Images/productivityIcon.png';
 import weatherIcon from './Images/weatherIcon.png';
 import healthAndFitnessIcon from './Images/healthAndFitnessIcon.png';
 
-export const listOne = {
+export const cluster = {
     cards: [
         {
             category: "Health & fitness",
@@ -28,12 +28,7 @@ export const listOne = {
             category: "Communication",
             url: communicationIcon,
             id: 4
-        }
-    ]
-};
-
-export const listTwo = {
-    cards: [
+        },
         {
             category: "Music & audio",
             url: musicAndAudioIcon,

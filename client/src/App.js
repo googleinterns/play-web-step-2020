@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import TopCharts from './Clusters/TopCharts/TopCharts.js';
 import MusicApps from './Clusters/MusicApps/MusicApps.js';
-import RecommendedCategories from './Clusters/RecommendedCategories/RecommendedCategories.js';
+import RecommendedCategories from './Clusters/RecommendedCategories/recommended_categories.js';
 
 class App extends Component {
   constructor(props) {
