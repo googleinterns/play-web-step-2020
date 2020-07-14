@@ -16,13 +16,13 @@ class RecommendedCategories extends Component {
         return (
             <div className="category-section">
                 <div className="category-section-header">
-                    <h6>Didn't find what you're looking for?</h6>
-                    <h2>Browse recommended categories</h2>
+                    <h6>{cluster.subheading}</h6>
+                    <h2>{cluster.heading}</h2>
                 </div>
                 <div className="card-container">
                     {cluster.cards.map(makeCard)}
                 </div>
-                <a href="https://play.google.com/">See all categories</a>
+                <a href={cluster.navigation.url}>{cluster.navigation.text}</a>
             </div>
         );
     }
