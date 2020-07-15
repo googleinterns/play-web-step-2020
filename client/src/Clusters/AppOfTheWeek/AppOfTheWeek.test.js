@@ -6,4 +6,4 @@ test('correct column titles', () => {
     const { getByText } = render(<AppOfTheWeek />);
     const textElement = getByText('Wear OS app of the week');
     expect(textElement).toBeInTheDocument();
-})
+});
