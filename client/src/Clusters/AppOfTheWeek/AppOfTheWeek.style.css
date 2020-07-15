@@ -1,0 +1,21 @@
+.app-of-the-week {
+    background-image: 
+        linear-gradient(to right, #C4E9DE 1%, #F0F9F700), 
+            url(./Images/background-image.jpg);
+    text-align: left;
+    margin: 100px;
+    padding: 20px;
+    border-radius: 30px;
+    background-size: cover;
+}
+
+.app-of-the-week .text {
+    color: #2E4057;
+    width: 40%;
+}
+
+.app-of-the-week .icon-img {
+    height: 80px;
+    width: 80px;
+    border-radius: 20px;
+}

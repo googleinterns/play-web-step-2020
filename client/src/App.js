@@ -3,6 +3,7 @@ import './App.css';
 import TopCharts from './Clusters/TopCharts/TopCharts.js';
 import MusicApps from './Clusters/MusicApps/MusicApps.js';
 import RecommendedCategories from './Clusters/RecommendedCategories/recommended_categories.js';
+import AppOfTheWeek from './Clusters/AppOfTheWeek/AppOfTheWeek.js';
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/v1/test-servlet')
+    fetch('/api/v1/stream')
         .then((response) => response.text())
         .then((text) => {this.setState({text})})
   }
@@ -19,6 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
+        <AppOfTheWeek />
         <MusicApps />
         <TopCharts />
         <RecommendedCategories />
