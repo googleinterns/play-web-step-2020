@@ -11,6 +11,7 @@ class MusicApps extends Component {
                 <SingleCardContainer
                 bigImage={item.wearOsImage}
                 title={item.title}
+                test={item.title}
                 iconUrl={item.iconUrl}
                 rating={item.rating}
                 rated={item.rated}
