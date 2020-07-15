@@ -32,6 +32,17 @@ with clusters of apps. There will be several different kinds of clusters, such a
    - Local: http://localhost:####
 3. Your new tab should now show the React app.
 
+## Steps to Re-deploy the Java Servlet
+
+- On the root directory, run `mvn appengine:deploy`.
+
+## Steps to Re-deploy the React App
+
+1. In a seperate terminal from the Java Servlet, cd into client.
+2. Run `yarn build`.
+2. Then run `gloud app deploy`.
+3. Copy the link from the statement "Deployed service [default] to [https://play-step-2020.uc.r.appspot.com]" and paste it in your browser.
+
 ## Tests
 
 1. For client tests, run `yarn test`.
