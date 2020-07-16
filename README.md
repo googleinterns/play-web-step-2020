@@ -32,7 +32,20 @@ with clusters of apps. There will be several different kinds of clusters, such a
    - Local: http://localhost:####
 3. Your new tab should now show the React app.
 
+## Re-deploying to Production
+Allows the developer to build the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance. You can re-deploy the frontend and backend separately at anytime using the commands below.
+
+## Steps to Re-deploy the Java Servlet
+
+- On the root directory, run `mvn appengine:deploy`.
+
+## Steps to Re-deploy the React App
+
+1. On the root directory, run `yarn build`.
+2. Then run `gloud app deploy client`.
+3. The URL of the deployed service will be displayed on the terminal
+
 ## Tests
 
 1. For client tests, run `yarn test`.
-2. For server tests, run `TBD`.
+2. For server tests, run `mvn test`.

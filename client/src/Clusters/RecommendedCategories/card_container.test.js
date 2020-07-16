@@ -1,20 +1,20 @@
 import React from 'react';
 import { render, wait } from '@testing-library/react';
-import CategoryContainer from './CategoryContainer.js';
+import CardContainer from './card_container.js';
 
-const renderCategoryContainer = () =>
+const renderCardContainer = () =>
     render(
-        <CategoryContainer
+        <CardContainer
             category={"test"}
             url={"testURL"} />
     );
 
 test('passes correct category', async () => {
-    const { getByText } = renderCategoryContainer();
+    const { getByText } = renderCardContainer();
     await wait(() => expect(getByText("test")).toBeInTheDocument());
 });
 
 test('passes correct url', async () => {
-    const { getByAltText } = renderCategoryContainer();
+    const { getByAltText } = renderCardContainer();
     expect(getByAltText("Category Icon").src).toEqual("http://localhost/testURL");
 });

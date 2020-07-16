@@ -31,12 +31,12 @@ test('passes correct iconUrl', async () => {
 
 test('passes correct rating', async () => {
     const { getByText } = renderSingleCardContainer();
-    await expect(getByText("5")).toBeInTheDocument();     
+    await expect(getByText("5", { exact: false })).toBeInTheDocument();     
 });
 
 test('passes correct rated', async () => {
     const { getByText } = renderSingleCardContainer();
-    await expect(getByText("Everyone")).toBeInTheDocument();     
+    await expect(getByText("Everyone", { exact: false })).toBeInTheDocument();     
 });
 
 test('passes correct appDescription', async () => {

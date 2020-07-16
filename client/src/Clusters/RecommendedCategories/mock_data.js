@@ -7,7 +7,9 @@ import productivityIcon from './Images/productivityIcon.png';
 import weatherIcon from './Images/weatherIcon.png';
 import healthAndFitnessIcon from './Images/healthAndFitnessIcon.png';
 
-export const listOne = {
+export const cluster = {
+    subheading: "Didn't find what you're looking for?",
+    heading: "Browse recommended categories",
     cards: [
         {
             category: "Health & fitness",
@@ -28,12 +30,7 @@ export const listOne = {
             category: "Communication",
             url: communicationIcon,
             id: 4
-        }
-    ]
-};
-
-export const listTwo = {
-    cards: [
+        },
         {
             category: "Music & audio",
             url: musicAndAudioIcon,
@@ -54,5 +51,9 @@ export const listTwo = {
             url: mapsAndNavigationIcon,
             id: 8
         }
-    ]
+    ],
+    navigation: {
+        text: "See all categories",
+        url: "https://play.google.com",
+    },
 };
