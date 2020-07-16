@@ -16,6 +16,6 @@ test('loads and displays greeting from Recommended Categories', () => {
 
 test('loads and displays greeting from App of the week', () => {
     const { getByText } = render(<App />);
-    const textElement = getByText('Wear OS app of the week');
+    const textElement = getByText('App of the week');
     expect(textElement).toBeInTheDocument();
 });

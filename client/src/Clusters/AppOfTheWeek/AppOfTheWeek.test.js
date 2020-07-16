@@ -4,6 +4,6 @@ import AppOfTheWeek from './AppOfTheWeek.js';
 
 test('correct column titles', () => {
     const { getByText } = render(<AppOfTheWeek />);
-    const textElement = getByText('Wear OS app of the week');
+    const textElement = getByText('App of the week');
     expect(textElement).toBeInTheDocument();
 });
