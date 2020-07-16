@@ -2,7 +2,7 @@ import stravaIcon from './Images/strava-icon.jpg';
 import backgroundImage from './Images/background-image.jpg';
 
 export const aotw = {
-    title: "Wear OS app of the week",
+    title: "App of the week",
     background_image: backgroundImage,
     description: `Strava lets you record your routes and analyze 
     stats like pace and calories burned for the entire route or 
