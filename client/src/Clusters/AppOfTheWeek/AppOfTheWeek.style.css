@@ -1,4 +1,4 @@
-.aotw{
+.app-of-the-week {
     background-image: 
         linear-gradient(to right, #C4E9DE 1%, #F0F9F700), 
             url(./Images/background-image.jpg);
@@ -9,12 +9,12 @@
     background-size: cover;
 }
 
-.aotw .text{
+.app-of-the-week .text {
     color: #2E4057;
     width: 40%;
 }
 
-.aotw .icon-img{
+.app-of-the-week .icon-img {
     height: 80px;
     width: 80px;
     border-radius: 20px;
