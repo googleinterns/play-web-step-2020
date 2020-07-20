@@ -2,11 +2,8 @@
     border-top: 1px solid #7f7f7f;
     padding-top: 30px;
     width: 90%;
-    display: inline-block;
-}
-
-.footer-left {
-    position: absolute;
+    display: flex;
+    margin: auto;
 }
 
 .footer-left h2 {
@@ -15,8 +12,8 @@
 }
 
 .footer-right {
-   position: relative;
-   width: 160%;
+    margin-left: auto;
+    order: 2;
 }
 
 .footer-right a {
