@@ -27,7 +27,6 @@ class TopCharts extends Component {
           <h3>{data.subtitle}</h3>
         </div>
         {data.charts && data.charts.map((chart) => {
-            console.log(chart)
             return <div className="col" key={chart.title}>
                         <div className="vertical-row">
                             <h3>{chart.title}</h3>

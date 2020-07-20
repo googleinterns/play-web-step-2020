@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class TopChartsCluster extends Cluster {
     private String title = "Top Charts";
     private String subtitle = "For Wear OS";
-    private ArrayList<Chart> charts = new ArrayList<Chart>();
+    private List<Chart> charts = new ArrayList<Chart>();
 
     TopChartsCluster() {
         makeCluster();

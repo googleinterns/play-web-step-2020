@@ -13,7 +13,10 @@ class App extends Component {
 
   componentDidMount() {
     fetch('/api/v1/stream')
-        .then((response) => response.json())
+        .then((response) => {
+            if(response.status == 200) {
+                return response.json()
+            }})
         .then((streamData) => {this.setState({streamData})})
   }
 
@@ -29,9 +32,9 @@ class App extends Component {
         {this.state.streamData.clusters.map((cluster) => {
             switch(cluster.type) {
             case "TopCharts":
-            return <TopCharts data={cluster} key={cluster.id} />
+                return <TopCharts data={cluster} key={cluster.id} />
             default:
-            return null;
+                return null;
         }
         })}
       </div>
