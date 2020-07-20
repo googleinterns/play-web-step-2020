@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles.css';
 import './Footer.style.css';
-import {data} from './mock_data.js';
+import {data} from './data.js';
 
 class Footer extends Component {
     render() {
