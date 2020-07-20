@@ -18,7 +18,8 @@
     float: right;
 }
 
-.footer-right p {
+.footer-right a {
     line-height: 1.6;
     text-align: left;
+    text-decoration: none;
 }
