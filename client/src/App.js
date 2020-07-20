@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import './App.css';
-import TopCharts from './Clusters/TopCharts/TopCharts.js';
-import StandardCluster from './Clusters/StandardCluster/standard_cluster.js';
-import RecommendedCategories from './Clusters/RecommendedCategories/recommended_categories.js';
 import AppOfTheWeek from './Clusters/AppOfTheWeek/AppOfTheWeek.js';
+import Footer from './Clusters/Footer/Footer.js';
+import RecommendedCategories from './Clusters/RecommendedCategories/recommended_categories.js';
+import StandardCluster from './Clusters/StandardCluster/standard_cluster.js';
+import TopCharts from './Clusters/TopCharts/TopCharts.js';
 
 class App extends Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class App extends Component {
         <AppOfTheWeek />
         <TopCharts />
         <RecommendedCategories />
+        <Footer />
       </div>
     );
   }
