@@ -10,7 +10,7 @@ class Footer extends Component {
                 <div className="vertical-row">
                     <h3>{item.title}</h3>
                     {item.subcategories.map((value, index) => {
-                        return <a href="#" className="grey-text" key={index}>{value}</a>
+                        return <a href={item.url} className="footer-link" key={index}>{value}</a>
                     })}
                 </div>
             </div>

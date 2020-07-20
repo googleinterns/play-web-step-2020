@@ -4,6 +4,7 @@ export const data = {
         {
             id: "01",
             title: "Google Play",
+            url: "#",
             subcategories: ["Play Pass", "Play Points", "Gift Cards", "Refund Policy"]
         },
         {

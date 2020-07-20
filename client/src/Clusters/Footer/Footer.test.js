@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, wait }from '@testing-library/react';
+import { render, wait } from '@testing-library/react';
 import Footer from './Footer.js';
 
 test('correct category', () => {
