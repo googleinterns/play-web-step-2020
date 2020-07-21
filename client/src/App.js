@@ -8,13 +8,13 @@ import AppOfTheWeek from './Clusters/AppOfTheWeek/AppOfTheWeek.js';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { streamData: null };
+    this.state = {};
   }
 
   componentDidMount() {
     fetch('/api/v1/stream')
         .then((response) => {
-            if(response.status == 200) {
+            if(response.status === 200) {
                 return response.json()
             }})
         .then((streamData) => {this.setState({streamData})})

@@ -18,8 +18,10 @@ class TopCharts extends Component {
         </div>
     );
 
-    const { data } = this.props;
-    
+    const { data } = this.props;    
+    if (data == null) {
+          return null;
+      }
     return (
       <div className="section">
         <div className="section-header">

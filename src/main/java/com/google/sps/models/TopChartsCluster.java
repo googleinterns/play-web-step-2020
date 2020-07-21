@@ -1,5 +1,6 @@
 package com.google.sps.servlets;
 import java.util.ArrayList;
+import java.util.List;
 
 public class TopChartsCluster extends Cluster {
     private String title = "Top Charts";
@@ -19,7 +20,7 @@ public class TopChartsCluster extends Cluster {
         return this.subtitle;
     }
 
-    public ArrayList<Chart> getCharts() {
+    public List<Chart> getCharts() {
         return this.charts;
     }
 
