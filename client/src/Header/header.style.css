@@ -38,11 +38,16 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .nav-bar .logo a{
+=======
+.nav-bar #logo a {
+>>>>>>> Fixes comments.
     padding: 6px;
 }
 
 .nav-bar .link a {
+<<<<<<< HEAD
     color: #7A7A7A;
     text-decoration: none;
     padding: 16px;
@@ -53,6 +58,8 @@
 .nav-bar .link a:hover {
 =======
 .nav-bar #link a {
+=======
+>>>>>>> Fixes comments.
     color: #7A7A7A;
     text-decoration: none;
     border-radius: 4px;
@@ -64,8 +71,12 @@
     padding-bottom: 18px;
 }
 
+<<<<<<< HEAD
 .nav-bar #link a:hover {
 >>>>>>> Sets up header
+=======
+.nav-bar .link a:hover {
+>>>>>>> Fixes comments.
     background-color: #F9F9F9;
     color: #525252;
 }
