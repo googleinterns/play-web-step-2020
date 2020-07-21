@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import Header from './Header/header.js';
 import TopCharts from './Clusters/TopCharts/TopCharts.js';
 import StandardCluster from './Clusters/StandardCluster/standard_cluster.js';
 import RecommendedCategories from './Clusters/RecommendedCategories/recommended_categories.js';
@@ -26,7 +27,10 @@ class App extends Component {
     }
     return (
       <div className='App'>
+        <Header />
         <AppOfTheWeek />
+        <StandardCluster />
+        <TopCharts />
         <RecommendedCategories />
         {this.state.streamData.clusters.map((cluster) => {
             switch(cluster.type) {
