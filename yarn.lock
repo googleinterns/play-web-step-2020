@@ -1150,7 +1150,14 @@
     "@babel/helper-split-export-declaration" "^7.10.4"
     "@babel/parser" "^7.10.4"
     "@babel/types" "^7.10.4"
+<<<<<<< HEAD
 >>>>>>> Installs yarn.
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Sets up header
+>>>>>>> Sets up header
     debug "^4.1.0"
     globals "^11.1.0"
     lodash "^4.17.19"
@@ -7458,10 +7465,21 @@ lodash.uniq@^4.5.0:
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "lodash@>=3.5 <5", lodash@^4.14.0, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.16, lodash@^4.17.19, lodash@^4.17.5:
 =======
 "lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.19, lodash@^4.17.5:
 >>>>>>> Installs yarn.
+=======
+<<<<<<< HEAD
+"lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.19, lodash@^4.17.5:
+=======
+"lodash@>=3.5 <5", lodash@^4.14.0, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.5:
+>>>>>>> 1b2c5aa0c1bf92ef48b19954903dae3a54445b22
+=======
+"lodash@>=3.5 <5", lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.19, lodash@^4.17.5:
+>>>>>>> Sets up header
+>>>>>>> Sets up header
   version "4.17.19"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
   integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
