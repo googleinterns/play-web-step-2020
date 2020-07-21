@@ -17,7 +17,7 @@ class Header extends Component {
                             Games
                         </a>
                     </li>
-                    <li className="nav-element link" id="active">
+                    <li className="nav-element" id="active">
                         <a href="https://play.google.com/store/apps">
                             Apps
                         </a>
