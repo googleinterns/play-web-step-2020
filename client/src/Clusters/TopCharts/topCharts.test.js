@@ -12,7 +12,7 @@ const data =  {
                  [{
                     id:"1",
                     icon:"mockIcon1.png",
-                    title:"mockApp1",
+                    title:"Mock App",
                     category:"Fake Apps",
                     rating:5.0,
                     price:0.0
@@ -28,4 +28,5 @@ const renderTopChart = () =>
 test('correct column titles', async() => {
     const { getByText } = renderTopChart();
     await wait(() => expect(getByText('Top Free')).toBeInTheDocument());
+    await wait(() => expect(getByText('Mock App')).toBeInTheDocument());
 });

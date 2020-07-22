@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import SingleAppContainer from './SingleAppContainer.js';
 import './TopChartsStyle.css';
 import '../styles.css';
@@ -19,9 +20,7 @@ class TopCharts extends Component {
     );
 
     const { data } = this.props;    
-    if (data == null) {
-          return null;
-      }
+ 
     return (
       <div className="section">
         <div className="section-header">
@@ -42,3 +41,7 @@ class TopCharts extends Component {
 }
  
 export default TopCharts;
+
+TopCharts.propTypes = {
+    data: PropTypes.isRequired
+};
