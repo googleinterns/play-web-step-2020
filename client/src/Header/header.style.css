@@ -1,5 +1,6 @@
 .nav-bar {
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin: 30px;
     overflow: hidden;
     z-index: 9999;
@@ -16,21 +17,30 @@
     margin: 0 10px;
 =======
     list-style-type: none; 
+=======
+>>>>>>> Fixing errors.
     margin: 30px;
     overflow: hidden;
-    width: 100%;
     z-index: 9999;
+    text-align: left;
+    display: flex;
 }
 
+/*
 .nav-bar li {
-    float: left;
+    display: flex;
 }
 
+<<<<<<< HEAD
 .nav-bar a {
     display: block;
     margin-right: 20px;
     margin-left: 20px;
 >>>>>>> Sets up header
+=======
+.nav-bar li a {
+    margin: 0 10px;
+>>>>>>> Fixing errors.
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;
@@ -39,10 +49,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 .nav-bar .logo a{
 =======
 .nav-bar #logo a {
 >>>>>>> Fixes comments.
+=======
+.nav-bar .logo a{
+>>>>>>> Fixing errors.
     padding: 6px;
 }
 
@@ -62,13 +76,9 @@
 >>>>>>> Fixes comments.
     color: #7A7A7A;
     text-decoration: none;
+    padding: 16px;
     border-radius: 4px;
-    border-bottom: 4px solid transparent;
     transition: 0.3s;
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 18px;
-    padding-bottom: 18px;
 }
 
 <<<<<<< HEAD
@@ -81,6 +91,7 @@
     color: #525252;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .nav-bar .active a {
     color: #429E73;
@@ -99,4 +110,11 @@
     padding-top: 18px;
     padding-bottom: 18px;
 >>>>>>> Fixes comments.
+=======
+.nav-bar .active a {
+    color: #429E73;
+    border-bottom: 3px solid #429E73;
+    padding: 18px 4px;
+>>>>>>> Fixing errors.
 }
+*/

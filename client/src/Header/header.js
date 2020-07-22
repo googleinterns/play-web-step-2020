@@ -10,6 +10,7 @@ class Header extends Component {
             <div className="header">
                 <ul className="nav-bar">
                     <li className="nav-element logo">
+<<<<<<< HEAD
 =======
     render(){
         return(
@@ -21,6 +22,8 @@ class Header extends Component {
                 <ul className="nav-bar">
                     <li className="nav-element" id="logo">
 >>>>>>> Sets up header
+=======
+>>>>>>> Fixing errors.
                         <a href="https://play.google.com/store">
                             <img src={playLogo} alt="Google Play Logo"/>
                         </a>
@@ -37,6 +40,7 @@ class Header extends Component {
                     <li className="nav-element" id="link">
 =======
                     <li className="nav-element link">
+<<<<<<< HEAD
 >>>>>>> Fixes comments.
                         <a href="https://bit.ly/30xkTrQ">
                             Games
@@ -52,6 +56,13 @@ class Header extends Component {
 =======
                     <li className="nav-element" id="active">
 >>>>>>> Fixes comments.
+=======
+                        <a href="https://play.google.com/store/apps/category/GAME">
+                            Games
+                        </a>
+                    </li>
+                    <li className="nav-element active">
+>>>>>>> Fixing errors.
                         <a href="https://play.google.com/store/apps">
                             Apps
                         </a>
@@ -90,9 +101,13 @@ class Header extends Component {
                     <li className="nav-element" id="link">
 =======
                     <li className="nav-element link">
+<<<<<<< HEAD
 >>>>>>> Fixes comments.
                         <a href="https://play.google.com/store/search?q=kids">
 >>>>>>> Sets up header
+=======
+                        <a href="https://play.google.com/store/apps/category/FAMILY">
+>>>>>>> Fixing errors.
                             Kids
                         </a>
                     </li>
