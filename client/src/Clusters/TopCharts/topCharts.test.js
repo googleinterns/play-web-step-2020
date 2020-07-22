@@ -1,12 +1,31 @@
 import React from 'react';
-import ShallowRenderer from 'react-test-renderer/shallow';
-import { render }from '@testing-library/react';
+import { render, wait } from '@testing-library/react';
 import TopCharts from './TopCharts.js';
 
-const renderer = new ShallowRenderer();
-renderer.render(<TopCharts data={cluster} />);
-const result = render.getRenderOutput();
+const data =  {
+             title:"Top Charts",
+             subtitle:"For Wear OS",
+             charts:
+             [{
+                title:"Top Free",
+                 apps:
+                 [{
+                    id:"1",
+                    icon:"mockIcon1.png",
+                    title:"mockApp1",
+                    category:"Fake Apps",
+                    rating:5.0,
+                    price:0.0
+                }],
+             }]}
 
-test('correct column titles', () => {
-    expect(result.props.className).to.equal("section");
-})
+const renderTopChart = () =>
+    render(
+        <TopCharts
+          data={data} />
+    );
+
+test('correct column titles', async() => {
+    const { getByText } = renderTopChart();
+    await wait(() => expect(getByText('Top Free')).toBeInTheDocument());
+});
