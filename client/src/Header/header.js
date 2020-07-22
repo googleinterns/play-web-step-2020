@@ -7,17 +7,17 @@ class Header extends Component {
         return (
             <div className="header">
                 <ul className="nav-bar">
-                    <li className="nav-element" id="logo">
+                    <li className="nav-element logo">
                         <a href="https://play.google.com/store">
                             <img src={playLogo} alt="Google Play Logo"/>
                         </a>
                     </li>
                     <li className="nav-element link">
-                        <a href="https://bit.ly/30xkTrQ">
+                        <a href="https://play.google.com/store/apps/category/GAME">
                             Games
                         </a>
                     </li>
-                    <li className="nav-element" id="active">
+                    <li className="nav-element active">
                         <a href="https://play.google.com/store/apps">
                             Apps
                         </a>
@@ -33,7 +33,7 @@ class Header extends Component {
                         </a>
                     </li>
                     <li className="nav-element link">
-                        <a href="https://play.google.com/store/search?q=kids">
+                        <a href="https://play.google.com/store/apps/category/FAMILY">
                             Kids
                         </a>
                     </li>
