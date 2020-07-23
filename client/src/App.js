@@ -38,8 +38,8 @@ class App extends Component {
                 return null;
         }
         })}
-      </div>
         <Footer />
+      </div>
     );
   }
 }
