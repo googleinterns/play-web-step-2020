@@ -23,7 +23,7 @@ class StandardCluster extends Component {
 
         return (
             <div className="section">
-                <div className="section-header" key={data.id}>
+                <div className="section-header">
                     <h2>{data.title}</h2>
                 </div>
                 <div className="col">
