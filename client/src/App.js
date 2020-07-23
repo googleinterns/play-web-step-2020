@@ -30,7 +30,6 @@ class App extends Component {
         <StandardCluster />
         <AppOfTheWeek />
         <RecommendedCategories />
-        <Footer />
         {this.state.streamData.clusters.map((cluster) => {
             switch(cluster.type) {
             case "TopCharts":
@@ -40,6 +39,7 @@ class App extends Component {
         }
         })}
       </div>
+        <Footer />
     );
   }
 }
