@@ -10,6 +10,7 @@ public class TopChartsCluster extends Cluster {
     TopChartsCluster() {
         makeCluster();
         this.type = getType();
+        this.id = getID();
     }
 
     public String getTitle() {
@@ -26,6 +27,10 @@ public class TopChartsCluster extends Cluster {
 
     public String getType() {
         return "TopCharts";
+    }
+
+    public String getID() {
+        return "topChartsID";
     }
 
     public void makeCluster(){

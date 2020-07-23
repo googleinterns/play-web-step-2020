@@ -9,6 +9,7 @@ public class StandardCluster extends Cluster {
     StandardCluster() {
         makeCluster();
         this.type = getType();
+        this.id = getID();
     }
 
     public String getTitle() {
@@ -21,6 +22,10 @@ public class StandardCluster extends Cluster {
 
     public String getType() {
         return "StandardCluster";
+    }
+
+    public String getID() {
+        return "standardClusterID";
     }
 
     public void makeCluster() {
