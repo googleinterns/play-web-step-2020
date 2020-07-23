@@ -1,6 +1,8 @@
 package com.google.sps.servlets;
 
-interface Cluster {
-    String getType();
-    void makeCluster();
+abstract class Cluster {
+    String type;
+    
+    abstract String getType();
+    abstract void makeCluster();
 }

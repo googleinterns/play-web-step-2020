@@ -3,20 +3,20 @@ import java.util.ArrayList;
 
 public class App {
         private String id;
-        private String icon, name, category, rated, appDescription;
+        private String icon, title, category, rated, appDescription;
         private double rating, price;
 
     public static class Builder {
         private String id;
-        private String icon, name, category, rated, appDescription;
+        private String icon, title, category, rated, appDescription;
         private double rating, price;
 
         public Builder(String id) {
             this.id = id;
         }
 
-        public Builder setName(String name) {
-            this.name = name;
+        public Builder setTitle(String title) {
+            this.title = title;
             return this;
         }
 
@@ -53,7 +53,7 @@ public class App {
         public App build() {
             App app = new App();
             app.id = this.id;
-            app.name = this.name;
+            app.title = this.title;
             app.icon = this.icon;
             app.category = this.category;
             app.rating = this.rating;
