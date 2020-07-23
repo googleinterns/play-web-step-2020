@@ -26,9 +26,9 @@
     display: flex;
 }
 
-/*
 .nav-bar li {
     display: flex;
+    list-style: none;
 }
 
 <<<<<<< HEAD
@@ -117,4 +117,3 @@
     padding: 18px 4px;
 >>>>>>> Fixing errors.
 }
-*/
