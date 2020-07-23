@@ -4,18 +4,69 @@ export const data = {
         {
             id: "01",
             title: "Google Play",
-            url: "#",
-            subcategories: ["Play Pass", "Play Points", "Gift Cards", "Refund Policy"]
+            subcategories: [
+                {
+                    title: "Play Pass",
+                    url: "#"
+                },
+                {
+                    title: "Play Points",
+                    url: "#"
+                },
+                {
+                    title: "Gift Cards",
+                    url: "#"
+                },
+                {
+                    title: "Refund Policy",
+                    url: "#"
+                }
+            ]
         },
         {
             id: "02",
             title: "For Families",
-            subcategories: ["Parent Guide", "Approved by Teachers", "Family Sharing"]
+            subcategories: [
+                {
+                    title: "Parent Guide",
+                    url: "#"
+                },
+                {
+                    title: "Approved by Teachers",
+                    url: "#"
+                },
+                {
+                    title: "Family Sharing",
+                    url: "#"
+                }
+            ]
         },
         {
             id: "03",
             title: "Developers",
-            subcategories: ["Platform", "Android Studio", "Jetpack", "Kotlin", "Docs"]
+            subcategories: [
+                {
+                    title: "Platform",
+                    url: "#"
+                },
+                {
+                    title: "Android Studio",
+                    url: "#"
+                },
+                {
+                    title: "Jetpack",
+                    url: "#"
+                },
+                {
+                    title: "Kotlin",
+                    url: "#"
+                },
+                {
+                    title: "Docs",
+                    url: "#"
+                }
+            ]
         }
     ]
 };
+
