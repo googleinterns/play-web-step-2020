@@ -6,9 +6,9 @@
     display: flex;
 }
 
-/*
 .nav-bar li {
     display: flex;
+    list-style: none;
 }
 
 .nav-bar li a {
@@ -41,4 +41,3 @@
     border-bottom: 3px solid #429E73;
     padding: 18px 4px;
 }
-*/
