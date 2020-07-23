@@ -43,5 +43,5 @@ class TopCharts extends Component {
 export default TopCharts;
 
 TopCharts.propTypes = {
-    data: PropTypes.isRequired
+    data: PropTypes.object.isRequired
 };

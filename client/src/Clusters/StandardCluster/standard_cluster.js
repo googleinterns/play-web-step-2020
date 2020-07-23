@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
+import SingleCardContainer from './SingleCardContainer.js';
 import '../styles.css';
 import './StandardClusterStyle.css';
-import SingleCardContainer from './SingleCardContainer.js';
-import {cluster} from './MockData.js';
 
 class StandardCluster extends Component {
     render() {
@@ -19,13 +19,15 @@ class StandardCluster extends Component {
             </div>
         );
 
+        const { data } = this.props;
+
         return (
             <div className="section">
                 <div className="section-header">
-                    <h2>{cluster.title}</h2>
+                    <h2>{data.title}</h2>
                 </div>
                 <div className="col">
-                    {cluster.cards.map(makeRow)}
+                    {data.cards.map(makeRow)}
                 </div>                
             </div>
         );
@@ -33,3 +35,7 @@ class StandardCluster extends Component {
 }
 
 export default StandardCluster;
+
+StandardCluster.propTypes = {
+    data: PropTypes.object.isRequired
+};
