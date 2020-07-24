@@ -1,11 +1,12 @@
-package com.google.sps.servlets;
+package com.google.sps.models;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Stream {
     private List<Cluster> clusters = new ArrayList<Cluster>();
 
-    Stream() {
+    public Stream() {
         TopChartsCluster topCharts = new TopChartsCluster();
         clusters.add(topCharts);
         StandardCluster standard = new StandardCluster();

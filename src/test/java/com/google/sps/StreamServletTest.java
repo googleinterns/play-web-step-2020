@@ -14,6 +14,7 @@
 
 package com.google.sps.servlets;
 
+import com.google.sps.models.Stream;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 

@@ -1,4 +1,4 @@
-package com.google.sps.servlets;
+package com.google.sps.models;
 import java.util.ArrayList;
 
 public class App {

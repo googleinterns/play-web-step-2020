@@ -1,4 +1,4 @@
-package com.google.sps.servlets;
+package com.google.sps.models;
 
 abstract class Cluster {
     String type;
