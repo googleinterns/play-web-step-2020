@@ -45,9 +45,9 @@ public class TopChartsCluster extends Cluster {
         ArrayList<App> topGrossing = new ArrayList<App>();
         ArrayList<App> topPaid = new ArrayList<App>();
 
-        Chart topFreeColumn = new Chart("Top Free", topFree);
-        Chart topGrossingColumn = new Chart("Top Grossing", topGrossing);
-        Chart topPaidColumn = new Chart("Top Paid", topPaid);
+        Chart topFreeColumn = new Chart.Builder("1").setTitle("Top Free").setApps(topFree).build();
+        Chart topGrossingColumn = new Chart.Builder("2").setTitle("Top Grossing").setApps(topGrossing).build();
+        Chart topPaidColumn = new Chart.Builder("3").setTitle("Top Paid").setApps(topPaid).build();
         topFree.add(mockApp1);
         topFree.add(mockApp2);
 
