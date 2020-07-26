@@ -19,7 +19,7 @@ class CardContainer extends Component {
                         </div>
                         <div className="img-section">
                             <img
-                                class="img-section"
+                                className="img-section"
                                 alt="Category Icon"
                                 src={url}
                             />

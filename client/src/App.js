@@ -8,22 +8,36 @@ import AppOfTheWeek from './Clusters/AppOfTheWeek/AppOfTheWeek.js';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { text: '' };
+    this.state = {};
   }
 
   componentDidMount() {
     fetch('/api/v1/stream')
-        .then((response) => response.text())
-        .then((text) => {this.setState({text})})
+        .then((response) => {
+            if(response.status === 200) {
+                return response.json()
+            }})
+        .then((streamData) => {this.setState({streamData})})
   }
 
   render() {
+    if (this.state.streamData == null) {
+        return null;
+    }
     return (
       <div className='App'>
-        <StandardCluster />
         <AppOfTheWeek />
-        <TopCharts />
         <RecommendedCategories />
+        {this.state.streamData.clusters.map((cluster) => {
+            switch(cluster.type) {
+            case "StandardCluster":
+                return <StandardCluster data={cluster} key={cluster.id} />
+            case "TopCharts":
+                return <TopCharts data={cluster} key={cluster.id} />
+            default:
+                return null;
+        }
+        })}
       </div>
     );
   }
