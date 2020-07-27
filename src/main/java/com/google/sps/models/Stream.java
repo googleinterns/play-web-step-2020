@@ -6,7 +6,7 @@ import java.util.List;
 public class Stream {
     private List<Cluster> clusters = new ArrayList<Cluster>();
 
-    Stream() {
+    public Stream() {
         StandardCluster standard = new StandardCluster();
         clusters.add(standard);
         TopChartsCluster topCharts = new TopChartsCluster();
