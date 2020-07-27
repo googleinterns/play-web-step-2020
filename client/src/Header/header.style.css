@@ -1,6 +1,4 @@
 .nav-bar {
-<<<<<<< HEAD
-<<<<<<< HEAD
     margin: 30px;
     overflow: hidden;
     z-index: 9999;
@@ -15,53 +13,17 @@
 
 .nav-bar li a {
     margin: 0 10px;
-=======
-    list-style-type: none; 
-=======
->>>>>>> Fixing errors.
-    margin: 30px;
-    overflow: hidden;
-    z-index: 9999;
-    text-align: left;
-    display: flex;
-}
-
-.nav-bar li {
-    display: flex;
-    list-style: none;
-}
-
-<<<<<<< HEAD
-.nav-bar a {
-    display: block;
-    margin-right: 20px;
-    margin-left: 20px;
->>>>>>> Sets up header
-=======
-.nav-bar li a {
-    margin: 0 10px;
->>>>>>> Fixing errors.
     font-size: 15px;
     font-weight: 500;
     text-decoration: none;
     text-align: center;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 .nav-bar .logo a{
-=======
-.nav-bar #logo a {
->>>>>>> Fixes comments.
-=======
-.nav-bar .logo a{
->>>>>>> Fixing errors.
     padding: 6px;
 }
 
 .nav-bar .link a {
-<<<<<<< HEAD
     color: #7A7A7A;
     text-decoration: none;
     padding: 16px;
@@ -70,50 +32,12 @@
 }
 
 .nav-bar .link a:hover {
-=======
-.nav-bar #link a {
-=======
->>>>>>> Fixes comments.
-    color: #7A7A7A;
-    text-decoration: none;
-    padding: 16px;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-
-<<<<<<< HEAD
-.nav-bar #link a:hover {
->>>>>>> Sets up header
-=======
-.nav-bar .link a:hover {
->>>>>>> Fixes comments.
     background-color: #F9F9F9;
     color: #525252;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .nav-bar .active a {
     color: #429E73;
     border-bottom: 3px solid #429E73;
     padding: 18px 4px;
-=======
-.nav-bar #active a {
-    color: #429E73;
-    border-bottom: 3px solid #429E73;
-<<<<<<< HEAD
-    padding: 16px;
->>>>>>> Sets up header
-=======
-    padding-left: 4px;
-    padding-right: 4px;
-    padding-top: 18px;
-    padding-bottom: 18px;
->>>>>>> Fixes comments.
-=======
-.nav-bar .active a {
-    color: #429E73;
-    border-bottom: 3px solid #429E73;
-    padding: 18px 4px;
->>>>>>> Fixing errors.
 }
