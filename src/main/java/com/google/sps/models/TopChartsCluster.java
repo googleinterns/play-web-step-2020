@@ -10,6 +10,7 @@ public class TopChartsCluster extends Cluster {
     TopChartsCluster() {
         makeCluster();
         this.type = getType();
+        this.id = getID();
     }
 
     public String getTitle() {
@@ -28,6 +29,10 @@ public class TopChartsCluster extends Cluster {
         return "TopCharts";
     }
 
+    public String getID() {
+        return "topChartsID";
+    }
+
     public void makeCluster(){
         App mockApp1 = new App.Builder("1").setTitle("mockApp1").setIcon("mockIcon1.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
         App mockApp2 = new App.Builder("2").setTitle("mockApp2").setIcon("mockIcon2.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
@@ -40,9 +45,9 @@ public class TopChartsCluster extends Cluster {
         ArrayList<App> topGrossing = new ArrayList<App>();
         ArrayList<App> topPaid = new ArrayList<App>();
 
-        Chart topFreeColumn = new Chart("Top Free", topFree);
-        Chart topGrossingColumn = new Chart("Top Grossing", topGrossing);
-        Chart topPaidColumn = new Chart("Top Paid", topPaid);
+        Chart topFreeColumn = new Chart.Builder("1").setTitle("Top Free").setApps(topFree).build();
+        Chart topGrossingColumn = new Chart.Builder("2").setTitle("Top Grossing").setApps(topGrossing).build();
+        Chart topPaidColumn = new Chart.Builder("3").setTitle("Top Paid").setApps(topPaid).build();
         topFree.add(mockApp1);
         topFree.add(mockApp2);
 

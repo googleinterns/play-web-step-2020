@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import AppOfTheWeek from './Clusters/AppOfTheWeek/AppOfTheWeek.js';
 import Footer from './Clusters/Footer/Footer.js';
+import Header from './Header/header.js';
 import RecommendedCategories from './Clusters/RecommendedCategories/recommended_categories.js';
 import StandardCluster from './Clusters/StandardCluster/standard_cluster.js';
 import TopCharts from './Clusters/TopCharts/TopCharts.js';
@@ -27,11 +28,12 @@ class App extends Component {
     }
     return (
       <div className='App'>
-        <StandardCluster />
+        <Header />
         <AppOfTheWeek />
-        <RecommendedCategories />
         {this.state.streamData.clusters.map((cluster) => {
             switch(cluster.type) {
+            case "StandardCluster":
+                return <StandardCluster data={cluster} key={cluster.id} />
             case "TopCharts":
                 return <TopCharts data={cluster} key={cluster.id} />
             default:

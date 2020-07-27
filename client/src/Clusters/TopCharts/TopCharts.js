@@ -28,7 +28,7 @@ class TopCharts extends Component {
           <h3>{data.subtitle}</h3>
         </div>
         {data.charts && data.charts.map((chart) => {
-            return <div className="col" key={chart.title}>
+            return <div className="col" key={data.id}>
                         <div className="vertical-row">
                             <h3>{chart.title}</h3>
                             {chart.apps.map(makeColumn)}
@@ -43,5 +43,5 @@ class TopCharts extends Component {
 export default TopCharts;
 
 TopCharts.propTypes = {
-    data: PropTypes.isRequired
+    data: PropTypes.object.isRequired
 };
