@@ -9,9 +9,9 @@ import com.google.appengine.api.datastore.DatastoreServiceFactory;
 
 public class AppReader {
     private DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+    private  ArrayList<Entity> apps = new ArrayList<Entity>();
 
     public AppReader(ArrayList<String> appIds) {
-        ArrayList<Entity> apps = new ArrayList<Entity>();
         Query query = new Query("App");
         PreparedQuery results = datastore.prepare(query);
 
@@ -22,5 +22,9 @@ public class AppReader {
                 }
             }
         }
+    }
+
+    public ArrayList<Entity> getApps() {
+        return apps;
     }
 }

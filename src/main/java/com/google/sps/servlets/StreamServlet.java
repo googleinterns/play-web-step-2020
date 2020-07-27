@@ -22,7 +22,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 @WebServlet("/api/v1/stream")
 public class StreamServlet extends HttpServlet {
 
@@ -31,7 +30,7 @@ public class StreamServlet extends HttpServlet {
     Stream stream = new Stream();
     String jsonStream = convertToJson(stream);
     response.setContentType("application/json");
-    response.getWriter().println(jsonStream); 
+    response.getWriter().println(jsonStream);
   }
 
   private String convertToJson(Stream stream) {
