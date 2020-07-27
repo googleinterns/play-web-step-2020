@@ -140,11 +140,6 @@ test('fetch returns data for Top Charts cluster', async () => {
     await wait(() => expect(getByText('Top Charts')).toBeInTheDocument());
 });
 
-test('loads and displays text from Recommended Categories', async () => {
-    const { getByText } = renderComponent();
-    await wait(() => expect(getByText('Browse recommended categories')).toBeInTheDocument());
-});
-
 test('loads and displays text from App of the week', async () => {
     const { getByText } = renderComponent();
     await wait(() => expect(getByText('App of the week')).toBeInTheDocument());
