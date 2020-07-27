@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
 import Header from './Header/header.js';
-import TopCharts from './Clusters/TopCharts/TopCharts.js';
-import StandardCluster from './Clusters/StandardCluster/standard_cluster.js';
 import AppOfTheWeek from './Clusters/AppOfTheWeek/AppOfTheWeek.js';
 
 class App extends Component {
