@@ -2,18 +2,18 @@ package com.google.sps.servlets;
 import java.util.ArrayList;
 
 class Card {
-    private String title;
+    private String id;
     private String bigImageUrl;
-    private App apps;
+    private App app;
 
-    Card(String title, String bigImageUrl, App apps) {
-        this.title = title;
+    Card(String id, String bigImageUrl, App app) {
+        this.id = id;
         this.bigImageUrl = bigImageUrl;
-        this.apps = apps;
+        this.app = app;
     }
 
-    public String getTitle() {
-        return this.title;
+    public String getId() {
+        return this.id;
     }
 
     public String getBigImageUrl() {
@@ -21,6 +21,6 @@ class Card {
     }
 
     public App getApp() {
-        return this.apps;
+        return this.app;
     }
 }

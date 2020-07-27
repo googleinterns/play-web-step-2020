@@ -34,12 +34,12 @@ public class TopChartsCluster extends Cluster {
     }
 
     public void makeCluster(){
-        App mockApp1 = new App.Builder("1").setTitle("mockApp1").setIcon("mockIcon1.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
-        App mockApp2 = new App.Builder("2").setTitle("mockApp2").setIcon("mockIcon2.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
-        App mockApp3 = new App.Builder("3").setTitle("mockApp3").setIcon("mockIcon3.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
-        App mockApp4 = new App.Builder("4").setTitle("mockApp4").setIcon("mockIcon4.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
-        App mockApp5 = new App.Builder("5").setTitle("mockApp5").setIcon("mockIcon5.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
-        App mockApp6 = new App.Builder("6").setTitle("mockApp6").setIcon("mockIcon6.png").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp1 = new App.Builder("1").setTitle("mockApp1").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp2 = new App.Builder("2").setTitle("mockApp2").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp3 = new App.Builder("3").setTitle("mockApp3").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp4 = new App.Builder("4").setTitle("mockApp4").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp5 = new App.Builder("5").setTitle("mockApp5").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).build();
+        App mockApp6 = new App.Builder("6").setTitle("mockApp6").setUrl("/images/emptyAppIcon.jpeg").setCategory("Fake Apps").setRating(5).setPrice(0).build();
 
         ArrayList<App> topFree = new ArrayList<App>();
         ArrayList<App> topGrossing = new ArrayList<App>();
