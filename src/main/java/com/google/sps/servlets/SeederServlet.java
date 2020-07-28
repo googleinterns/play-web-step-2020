@@ -12,5 +12,6 @@ public class SeederServlet extends HttpServlet {
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         AppSeeder appsToDB = new AppSeeder();
+        appsToDB.seedDB();
     }
 }

@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
-public final class SeederServletTest {
+public final class testAppReader_returnsAllAppsFromDb {
 
   private static final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig().setDefaultHighRepJobPolicyUnappliedJobPercentage(0));
@@ -42,15 +42,15 @@ public final class SeederServletTest {
 
     @Test
     public void testAppReader() throws Exception {
-        
         AppSeeder addApp = new AppSeeder();
         addApp.seedDB();
 
         ArrayList<String> testAppIds = new ArrayList<String>();
         testAppIds.add("com.facebook.ocra");
         testAppIds.add("com.pandora.android");
-        AppReader apps = new AppReader(testAppIds);
+        AppReader apps = new AppReader();
         
-        assertEquals("com.facebook.ocra", apps.getApps().get(0).getProperty("id"));
+        assertEquals("com.facebook.ocra", apps.getApps(testAppIds).get(0).getProperty("id"));
+        assertEquals(2, apps.getApps(testAppIds).size());
     }   
 }
