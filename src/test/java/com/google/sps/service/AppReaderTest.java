@@ -12,10 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.google.sps.servlets;
+package com.google.sps.service;
 
-import com.google.sps.service.AppReader;
 import com.google.sps.seeder.AppSeeder;
+import com.google.sps.service.AppReader;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import org.junit.AfterClass;
@@ -25,7 +25,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
-public final class testAppReader_returnsAllAppsFromDb {
+public final class AppReaderTest {
 
   private static final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig().setDefaultHighRepJobPolicyUnappliedJobPercentage(0));

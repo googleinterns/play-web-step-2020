@@ -7,10 +7,10 @@ public class AppSeeder {
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 
     public void seedDB() {
-        setEntityProperties("social", "connect with friends", "mockIcon.url", "com.facebook.ocra", "Messenger", 0, 4.6);
-        setEntityProperties("music", "Listen to your songs", "mockIcon.url", "com.pandora.android", "Pandora", 0, 4.6);
-        setEntityProperties("wearOS", "Be in control of you WearOS", "mockIcon.url", "com.google.android.wearable.app", "Wear OS by Google", 0, 4.6);
-        setEntityProperties("weather", "check the weather", "mockIcon.url", "com.acmeaom.android.myradar", "myWeather Radar", 0, 4.6);
+        setEntityProperties("social", "connect with friends", "/images/emptyAppIcon.jpeg", "com.facebook.ocra", "Messenger", 0, 4.6);
+        setEntityProperties("music", "Listen to your songs", "/images/emptyAppIcon.jpeg", "com.pandora.android", "Pandora", 0.99, 4.6);
+        setEntityProperties("wearOS", "Be in control of you WearOS", "/images/emptyAppIcon.jpeg", "com.google.android.wearable.app", "Wear OS by Google", 0, 4.6);
+        setEntityProperties("weather", "check the weather", "/images/emptyAppIcon.jpeg", "com.acmeaom.android.myradar", "myWeather Radar", 0.99, 4.6);
     }
 
     public void setEntityProperties(String category, String description, String icon, String id, String name, double price, double rating) {
