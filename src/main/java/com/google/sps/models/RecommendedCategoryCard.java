@@ -1,4 +1,4 @@
-package com.google.sps.servlets;
+package com.google.sps.models;
 
 class RecommendedCategoryCard {
     private String id;
