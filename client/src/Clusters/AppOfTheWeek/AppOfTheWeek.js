@@ -4,8 +4,8 @@ import './AppOfTheWeek.style.css'
 import {aotw} from './mockData.js';
 
 class AppOfTheWeek extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <div className="app-of-the-week">
                 <div className="text">
                     <h2 className="header">{aotw.title}</h2>

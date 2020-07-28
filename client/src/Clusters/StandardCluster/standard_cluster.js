@@ -9,12 +9,13 @@ class StandardCluster extends Component {
         const makeRow = item => (
             <div key={item.id}>
                 <SingleCardContainer
-                bigImage={item.wearOsImage}
-                title={item.title}
-                iconUrl={item.iconUrl}
-                rating={item.rating}
-                rated={item.rated}
-                appDescription={item.appDescription}
+                bigImageUrl={item.bigImageUrl}
+                title={item.app.title}
+                url={item.app.url}
+                rating={item.app.rating}
+                rated={item.app.rated}
+                price={item.app.price}
+                appDescription={item.app.appDescription}
                 />
             </div>
         );

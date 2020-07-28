@@ -5,11 +5,12 @@ import SingleCardContainer from './SingleCardContainer.js';
 const renderSingleCardContainer = () =>
     render(
         <SingleCardContainer 
-            bigImage="http://imageurl.com"
+            bigImageUrl="http://imageurl.com"
             title="test Card Container"
-            iconUrl="http://testiconurl.com"
+            url="http://testiconurl.com"
             rating={5}
             rated="Everyone"
+            price={0.99}
             appDescription="this is a test"
         />
     );

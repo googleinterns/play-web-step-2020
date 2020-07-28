@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
-import Header from './Header/header.js';
-import TopCharts from './Clusters/TopCharts/TopCharts.js';
-import StandardCluster from './Clusters/StandardCluster/standard_cluster.js';
 import AppOfTheWeek from './Clusters/AppOfTheWeek/AppOfTheWeek.js';
+import Footer from './Clusters/Footer/Footer.js';
+import Header from './Header/header.js';
+import RecommendedCategories from './Clusters/RecommendedCategories/recommended_categories.js';
+import StandardCluster from './Clusters/StandardCluster/standard_cluster.js';
+import TopCharts from './Clusters/TopCharts/TopCharts.js';
 
 class App extends Component {
   constructor(props) {
@@ -28,6 +30,7 @@ class App extends Component {
       <div className='App'>
         <Header />
         <AppOfTheWeek />
+        <RecommendedCategories />
         {this.state.streamData.clusters.map((cluster) => {
             switch(cluster.type) {
             case "StandardCluster":
@@ -38,6 +41,7 @@ class App extends Component {
                 return null;
         }
         })}
+        <Footer />
       </div>
     );
   }
