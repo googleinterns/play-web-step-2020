@@ -10,6 +10,8 @@ public class Stream {
         clusters.add(standard);
         TopChartsCluster topCharts = new TopChartsCluster();
         clusters.add(topCharts);
+        RecommendedCategories recommendedCategories = new RecommendedCategories();
+        clusters.add(recommendedCategories);
     }
 
     public List<Cluster> getClusters() {
