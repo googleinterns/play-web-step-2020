@@ -30,13 +30,14 @@ class App extends Component {
       <div className='App'>
         <Header />
         <AppOfTheWeek />
-        <RecommendedCategories />
         {this.state.streamData.clusters.map((cluster) => {
             switch(cluster.type) {
             case "StandardCluster":
                 return <StandardCluster data={cluster} key={cluster.id} />
             case "TopCharts":
                 return <TopCharts data={cluster} key={cluster.id} />
+            case "RecommendedCategories":
+                return <RecommendedCategories data={cluster} key={cluster.id} />
             default:
                 return null;
         }

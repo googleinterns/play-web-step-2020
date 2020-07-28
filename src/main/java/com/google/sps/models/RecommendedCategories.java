@@ -6,7 +6,9 @@ public class RecommendedCategories extends Cluster {
     private String title = "Browse recommended categories";
     private String subtitle = "Didn't find what you're looking for?";
     private List<RecommendedCategoryCard> card = new ArrayList<RecommendedCategoryCard>();
-    private String navigation = "See all categories";
+    private String text = "See all categories";
+    private String url = "https://play.google.com";
+
 
     RecommendedCategories() {
         makeCluster();
@@ -26,8 +28,12 @@ public class RecommendedCategories extends Cluster {
         return this.card;
     }
 
-    public String getNavigation() {
-        return this.navigation;
+    public String getText() {
+        return this.text;
+    }
+
+    public String getUrl() {
+        return this.url;
     }
 
     public String getType() {
@@ -39,14 +45,14 @@ public class RecommendedCategories extends Cluster {
     }
 
     public void makeCluster() {
-        RecommendedCategoryCard mockCard1 = new RecommendedCategoryCard("mockCard1", "Health & fitness", "mockIcon1.png");
-        RecommendedCategoryCard mockCard2 = new RecommendedCategoryCard("mockCard2", "Weather", "mockIcon2.png");
-        RecommendedCategoryCard mockCard3 = new RecommendedCategoryCard("mockCard3", "Productivity", "mockIcon3.png");
-        RecommendedCategoryCard mockCard4 = new RecommendedCategoryCard("mockCard4", "Communication", "mockIcon4.png");
-        RecommendedCategoryCard mockCard5 = new RecommendedCategoryCard("mockCard5", "Music & audio", "mockIcon5.png");
-        RecommendedCategoryCard mockCard6 = new RecommendedCategoryCard("mockCard6", "Educational", "mockIcon6.png");
-        RecommendedCategoryCard mockCard7 = new RecommendedCategoryCard("mockCard7", "Sports", "mockIcon7.png");
-        RecommendedCategoryCard mockCard8 = new RecommendedCategoryCard("mockCard8", "Maps & Navigation", "mockIcon8.png");
+        RecommendedCategoryCard mockCard1 = new RecommendedCategoryCard("mockCard1", "Health & fitness", "/images/healthAndFitnessIcon.png");
+        RecommendedCategoryCard mockCard2 = new RecommendedCategoryCard("mockCard2", "Weather", "/images/weatherIcon.png");
+        RecommendedCategoryCard mockCard3 = new RecommendedCategoryCard("mockCard3", "Productivity", "/images/productivityIcon.png");
+        RecommendedCategoryCard mockCard4 = new RecommendedCategoryCard("mockCard4", "Communication", "/images/communicationIcon.png");
+        RecommendedCategoryCard mockCard5 = new RecommendedCategoryCard("mockCard5", "Music & audio", "/images/musicAndAudioIcon.png");
+        RecommendedCategoryCard mockCard6 = new RecommendedCategoryCard("mockCard6", "Educational", "/images/educationalIcon.png");
+        RecommendedCategoryCard mockCard7 = new RecommendedCategoryCard("mockCard7", "Sports", "/images/sportsIcon.png");
+        RecommendedCategoryCard mockCard8 = new RecommendedCategoryCard("mockCard8", "Maps & Navigation", "/images/mapsAndNavigationIcon.png");
         card.add(mockCard1);
         card.add(mockCard2);
         card.add(mockCard3);
