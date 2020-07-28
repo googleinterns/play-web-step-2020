@@ -30,6 +30,7 @@ class App extends Component {
       <div className='App'>
         <Header />
         <AppOfTheWeek />
+        <RecommendedCategories />
         {this.state.streamData.clusters.map((cluster) => {
             switch(cluster.type) {
             case "StandardCluster":
