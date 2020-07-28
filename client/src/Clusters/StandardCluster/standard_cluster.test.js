@@ -6,11 +6,11 @@ const data = {
     title: "Rock out while you work out",
          cards: [
             {
-               title: "mockCard1",
-               bigImageUrl: "https://mockBigImageUrl.com",
-               apps: {
+               id: "mockCard1",
+               bigImageUrl: "/images/emptyAppIcon.jpeg",
+               app: {
                   id: "1",
-                  icon: "mockIcon1.png",
+                  url: "/images/emptyAppIcon.jpeg",
                   title: "mockApp1",
                   category: "Fake Apps",
                   rated: "Everyone",
@@ -27,8 +27,13 @@ const renderStandardCluster = () =>
           data={data} />
     );
 
-test('correct title and app card data', async () => {
+test('correct title', async () => {
     const { getByText } = renderStandardCluster();
-    await wait(() => expect(getByText('Rock out while you work out')).toBeInTheDocument());
-    await wait(() => expect(getByText('mockCard1')).toBeInTheDocument());
+    await wait(() => expect(getByText('Rock out while you work out')).toBeInTheDocument());  
+});
+
+test('correct app object data', async () => {
+    const { getByText } = renderStandardCluster();
+    await wait(() => expect(getByText('mockApp1')).toBeInTheDocument());
+
 });
