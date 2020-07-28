@@ -1,11 +1,11 @@
 package com.google.sps.servlets;
 
-class Container {
+class RecommendedCategoryCard {
     private String id;
     private String category;
     private String url;
 
-    Container(String id, String category, String url) {
+    RecommendedCategoryCard(String id, String category, String url) {
         this.id = id;
         this.category = category;
         this.url = url;
