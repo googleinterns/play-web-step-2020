@@ -14,9 +14,11 @@
 
 package com.google.sps.service;
 
+import com.google.sps.service.AppConverter;
 import com.google.sps.models.App;
 import com.google.sps.seeder.AppSeeder;
 import com.google.sps.service.AppReader;
+import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import org.junit.AfterClass;
@@ -26,8 +28,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
-public final class AppReaderTest {
-
+public final class AppConverterTest {
   private static final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig().setDefaultHighRepJobPolicyUnappliedJobPercentage(0));
 
@@ -43,15 +44,16 @@ public final class AppReaderTest {
 
     @Test
     public void testAppReader() throws Exception {
-        AppSeeder addApp = new AppSeeder();
-        addApp.seedDB();
+        AppSeeder populateDB = new AppSeeder();
+        populateDB.seedDB();
 
-        ArrayList<String> testAppIds = new ArrayList<String>();
-        testAppIds.add("com.facebook.ocra");
-        testAppIds.add("com.pandora.android");
-        AppReader apps = new AppReader();
+        ArrayList<String> appsToQuery = new ArrayList<String>();
+        appsToQuery.add("com.google.android.wearable.app");
+        appsToQuery.add("com.acmeaom.android.myradar");
+        ArrayList<Entity> appEntities = new AppReader().getApps(appsToQuery);
+        ArrayList<App> convertedApps = new AppConverter().convertToApp(appEntities);
         
-        assertEquals("com.facebook.ocra", apps.getApps(testAppIds).get(0).getProperty("id"));
-        assertEquals(2, apps.getApps(testAppIds).size());
-    }   
+        assertEquals("Wear OS by Google", convertedApps.get(0).getTitle());
+        assertEquals(2, convertedApps.size());
+    }
 }

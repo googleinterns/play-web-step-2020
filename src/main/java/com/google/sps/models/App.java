@@ -2,9 +2,40 @@ package com.google.sps.models;
 import java.util.ArrayList;
 
 public class App {
-        private String id;
-        private String url, title, category, rated, appDescription;
+        private String id, url, title, category, rated, appDescription;
         private double rating, price;
+
+        public String getId() {
+            return id;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public String getUrl() {
+            return url;
+        }
+
+        public String getCategory() {
+            return category;
+        }
+
+        public String getRated() {
+            return rated;
+        }
+
+        public String appDescription() {
+            return appDescription;
+        }
+
+        public double getRating() {
+            return rating;
+        }
+
+        public double getPrice() {
+            return price;
+        }
 
     public static class Builder {
         private String id;
