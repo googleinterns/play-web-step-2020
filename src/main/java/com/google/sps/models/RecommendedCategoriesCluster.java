@@ -2,7 +2,7 @@ package com.google.sps.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecommendedCategories extends Cluster {
+public class RecommendedCategoriesCluster extends Cluster {
     private String title = "Browse recommended categories";
     private String subtitle = "Didn't find what you're looking for?";
     private List<RecommendedCategoryCard> card = new ArrayList<RecommendedCategoryCard>();
@@ -10,7 +10,7 @@ public class RecommendedCategories extends Cluster {
     private String url = "https://play.google.com";
 
 
-    RecommendedCategories() {
+    RecommendedCategoriesCluster() {
         makeCluster();
         this.type = getType();
         this.id = getID();

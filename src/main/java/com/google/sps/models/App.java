@@ -3,12 +3,12 @@ import java.util.ArrayList;
 
 public class App {
         private String id;
-        private String url, title, category, rated, appDescription;
+        private String url, title, category, rated, appDescription, developer, review;
         private double rating, price;
 
     public static class Builder {
         private String id;
-        private String url, title, category, rated, appDescription;
+        private String url, title, category, rated, appDescription, developer, review;
         private double rating, price;
 
         public Builder(String id) {
@@ -50,6 +50,16 @@ public class App {
             return this;
         }
 
+        public Builder setDeveloper(String developer) {
+            this.developer = developer;
+            return this;
+        }
+
+        public Builder setReview(String review) {
+            this.review = review;
+            return this;
+        }
+
         public App build() {
             App app = new App();
             app.id = this.id;
@@ -60,6 +70,8 @@ public class App {
             app.price = this.price;
             app.rated = this.rated;
             app.appDescription = this.appDescription;
+            app.developer = this.developer;
+            app.review = this.review;
             return app;
         }
     }
