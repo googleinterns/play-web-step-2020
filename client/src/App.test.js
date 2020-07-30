@@ -7,6 +7,26 @@ const responseData =
 {
    "clusters": [
       {
+         "title": "Wear OS app of the week",
+         "card": {
+            "id": "mockCard",
+            "bigImageUrl": "https://mockBigImageUrl.com",
+            "app": {
+               "id": "1",
+               "url": "/images/emptyAppIcon.jpeg",
+               "title": "mockApp",
+               "rated": "Everyone",
+               "appDescription": "mock app description",
+               "developer": "Mock Developer",
+               "review": "11K reviews",
+               "rating": 5,
+               "price": 0
+            }
+         },
+         "type": "AppOfTheWeekCluster",
+         "id": "AppOfTheWeekID"
+      },
+      {
          "title": "Rock out while you work out",
          "cards": [
             {
@@ -212,9 +232,9 @@ test('fetch returns data for Top Charts cluster', async () => {
     await wait(() => expect(getByText('Top Charts')).toBeInTheDocument());
 });
 
-test('loads and displays text from App of the week', async () => {
+test('fetch returns data from App of the week cluster', async () => {
     const { getByText } = renderComponent();
-    await wait(() => expect(getByText('App of the week')).toBeInTheDocument());
+    await wait(() => expect(getByText('Wear OS app of the week')).toBeInTheDocument());
 });
 
 test('fetch returns data for Standard Cluster', async () => {
