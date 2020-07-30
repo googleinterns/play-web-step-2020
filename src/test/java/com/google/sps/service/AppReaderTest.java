@@ -41,7 +41,7 @@ public final class AppReaderTest {
     }
 
     @Test
-    public void testAppConverter() throws Exception {
+    public void testAppReader() throws Exception {
         AppSeeder addApp = new AppSeeder();
         addApp.seedDB();
 

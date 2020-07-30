@@ -75,6 +75,6 @@ public final class AppConverterTest {
 
         List<App> convertedApps = new AppConverter().convertToApp(entities);
         assertEquals("test app 1", convertedApps.get(0).getTitle());
-
+        assertEquals(2, convertedApps.size());
     }
 }
