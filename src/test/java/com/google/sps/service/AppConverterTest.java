@@ -43,17 +43,22 @@ public final class AppConverterTest {
     }
 
     @Test
-    public void testAppReader() throws Exception {
-        AppSeeder populateDB = new AppSeeder();
-        populateDB.seedDB();
+    public void testAppConverter() throws Exception {
+        AppSeeder addApps = new AppSeeder();
+        addApps.seedDB();
 
-        ArrayList<String> appsToQuery = new ArrayList<String>();
-        appsToQuery.add("com.google.android.wearable.app");
-        appsToQuery.add("com.acmeaom.android.myradar");
-        ArrayList<Entity> appEntities = new AppReader().getApps(appsToQuery);
-        ArrayList<App> convertedApps = new AppConverter().convertToApp(appEntities);
-        
-        assertEquals("Wear OS by Google", convertedApps.get(0).getTitle());
-        assertEquals(2, convertedApps.size());
+        // Convert single entity
+        ArrayList<String> EntityIds = new ArrayList<String>();
+        EntityIds.add("com.facebook.ocra");
+        Entity singleEntity = new AppReader().getApps(EntityIds).get(0);
+        App convertedSingleEntity = new AppConverter().convertEntityProperties(singleEntity);
+        assertEquals("Messenger", convertedSingleEntity.getTitle());
+    
+        // Convert multiple entities
+        EntityIds.add("com.google.android.wearable.app");
+        ArrayList<Entity> multipleEntities = new AppReader().getApps(EntityIds);
+        ArrayList<App> convertedMultipleEntities = new AppConverter().convertToApp(multipleEntities);
+        assertEquals("connect with friends", convertedMultipleEntities.get(0).getAppDescription());
+        assertEquals("Wear OS by Google", convertedMultipleEntities.get(1).getTitle());
     }
 }

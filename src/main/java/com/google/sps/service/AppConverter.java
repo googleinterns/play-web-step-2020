@@ -14,11 +14,14 @@ class AppConverter {
     }
 
     public App convertEntityProperties(Entity entity) {
-        return addApp((String)entity.getProperty("id"), (String)entity.getProperty("title"), (String)entity.getProperty("url"), (String)entity.getProperty("category"), (double)entity.getProperty("rating"), (double)entity.getProperty("price"), (String)entity.getProperty("rated"), (String)entity.getProperty("description"));
-    }
-
-    public App addApp(String id, String title, String url, String category, double rating, double price, String rated, String appDescription) {
-        App app = new App.Builder(id).setTitle(title).setUrl(url).setCategory(category).setRating(rating).setPrice(price).setRated(rated).setAppDescription(appDescription).build();
-        return app;
+        return new App.Builder((String)entity.getProperty("id"))
+                .setTitle((String)entity.getProperty("title"))
+                .setUrl((String)entity.getProperty("url"))
+                .setCategory((String)entity.getProperty("category"))
+                .setRating((double)entity.getProperty("rating"))
+                .setPrice((double)entity.getProperty("price"))
+                .setRated((String)entity.getProperty("rated"))
+                .setAppDescription((String)entity.getProperty("description"))
+                .build();
     }
 }

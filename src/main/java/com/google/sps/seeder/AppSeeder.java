@@ -26,3 +26,4 @@ public class AppSeeder {
         datastore.put(app);  
     }
 }
+

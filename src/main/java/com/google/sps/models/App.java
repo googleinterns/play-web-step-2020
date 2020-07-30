@@ -25,7 +25,7 @@ public class App {
             return rated;
         }
 
-        public String appDescription() {
+        public String getAppDescription() {
             return appDescription;
         }
 

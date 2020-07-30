@@ -14,7 +14,6 @@
 
 package com.google.sps.service;
 
-import com.google.sps.models.App;
 import com.google.sps.seeder.AppSeeder;
 import com.google.sps.service.AppReader;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
