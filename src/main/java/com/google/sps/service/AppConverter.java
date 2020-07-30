@@ -7,7 +7,7 @@ import java.util.List;
 
 class AppConverter {
     
-    public List<App> convertToApp(ArrayList<Entity> appEntities) {
+    public List<App> convertToApp(List<Entity> appEntities) {
         ArrayList<App> apps = new ArrayList<App>();
         for(Entity entity: appEntities) {
            apps.add(convertEntityProperties(entity));

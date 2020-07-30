@@ -47,7 +47,7 @@ public final class AppConverterTest {
     public void testAppConverter() throws Exception {
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 
-        ArrayList<Entity> entities = new ArrayList<Entity>();
+        List<Entity> entities = new ArrayList<Entity>();
         Entity app1 = new Entity("App");
         app1.setProperty("category", "test");
         app1.setProperty("description", "this is a test app");
