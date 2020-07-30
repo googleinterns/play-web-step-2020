@@ -16,15 +16,16 @@ package com.google.sps.service;
 
 import com.google.sps.service.AppConverter;
 import com.google.sps.models.App;
-import com.google.sps.seeder.AppSeeder;
-import com.google.sps.service.AppReader;
 import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -44,21 +45,36 @@ public final class AppConverterTest {
 
     @Test
     public void testAppConverter() throws Exception {
-        AppSeeder addApps = new AppSeeder();
-        addApps.seedDB();
+        DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 
-        // Convert single entity
-        ArrayList<String> EntityIds = new ArrayList<String>();
-        EntityIds.add("com.facebook.ocra");
-        Entity singleEntity = new AppReader().getApps(EntityIds).get(0);
-        App convertedSingleEntity = new AppConverter().convertEntityProperties(singleEntity);
-        assertEquals("Messenger", convertedSingleEntity.getTitle());
-    
-        // Convert multiple entities
-        EntityIds.add("com.google.android.wearable.app");
-        ArrayList<Entity> multipleEntities = new AppReader().getApps(EntityIds);
-        ArrayList<App> convertedMultipleEntities = new AppConverter().convertToApp(multipleEntities);
-        assertEquals("connect with friends", convertedMultipleEntities.get(0).getAppDescription());
-        assertEquals("Wear OS by Google", convertedMultipleEntities.get(1).getTitle());
+        ArrayList<Entity> entities = new ArrayList<Entity>();
+        Entity app1 = new Entity("App");
+        app1.setProperty("category", "test");
+        app1.setProperty("description", "this is a test app");
+        app1.setProperty("url", "www.testapp.com");
+        app1.setProperty("id", "testId");
+        app1.setProperty("title", "test app 1");
+        app1.setProperty("price", 0.99);
+        app1.setProperty("rating", 3.6); 
+        app1.setProperty("rated", "Everyone");
+        datastore.put(app1);  
+
+        Entity app2 = new Entity("App");
+        app2.setProperty("category", "test");
+        app2.setProperty("description", "this is another test app");
+        app2.setProperty("url", "www.testapp2.com");
+        app2.setProperty("id", "test2Id");
+        app2.setProperty("title", "test app 2");
+        app2.setProperty("price", 0.99);
+        app2.setProperty("rating", 3.6); 
+        app2.setProperty("rated", "Everyone");
+        datastore.put(app2); 
+
+        entities.add(app1);
+        entities.add(app2);
+
+        List<App> convertedApps = new AppConverter().convertToApp(entities);
+        assertEquals("test app 1", convertedApps.get(0).getTitle());
+
     }
 }
