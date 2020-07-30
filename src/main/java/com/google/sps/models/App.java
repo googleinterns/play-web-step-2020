@@ -98,16 +98,6 @@ public class App {
             return this;
         }
 
-        public Builder setDeveloper(String developer) {
-            this.developer = developer;
-            return this;
-        }
-
-        public Builder setReview(String review) {
-            this.review = review;
-            return this;
-        }
-
         public App build() {
             App app = new App();
             app.id = this.id;
