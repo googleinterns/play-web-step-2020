@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import CardContainer from './card_container.js';
-import { cluster } from './mock_data.js';
 import '../styles.css';
 
 class RecommendedCategories extends Component {
@@ -13,19 +13,25 @@ class RecommendedCategories extends Component {
             />
         );
 
+        const { data } = this.props;
+
         return (
             <div className="category-section">
                 <div className="category-section-header">
-                    <h6>{cluster.subheading}</h6>
-                    <h2>{cluster.heading}</h2>
+                    <h6>{data.subtitle}</h6>
+                    <h2>{data.title}</h2>
                 </div>
                 <div className="card-container">
-                    {cluster.cards.map(makeCard)}
+                    {data.card.map(makeCard)}
                 </div>
-                <a href={cluster.navigation.url}>{cluster.navigation.text}</a>
+                <a href={data.url}>{data.text}</a>
             </div>
         );
     }
 }
 
 export default RecommendedCategories;
+
+RecommendedCategories.propTypes = {
+    data: PropTypes.object.isRequired
+};
