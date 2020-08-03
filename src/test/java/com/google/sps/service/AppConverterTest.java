@@ -19,8 +19,6 @@ import com.google.sps.models.App;
 import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
-import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -44,9 +42,7 @@ public final class AppConverterTest {
     }
 
     @Test
-    public void testAppConverter() throws Exception {
-        DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-
+    public void testAppSeeder() throws Exception {
         List<Entity> entities = new ArrayList<Entity>();
         Entity app1 = new Entity("App");
         app1.setProperty("category", "test");
@@ -57,7 +53,6 @@ public final class AppConverterTest {
         app1.setProperty("price", 0.99);
         app1.setProperty("rating", 3.6); 
         app1.setProperty("rated", "Everyone");
-        datastore.put(app1);  
 
         Entity app2 = new Entity("App");
         app2.setProperty("category", "test");
@@ -68,7 +63,6 @@ public final class AppConverterTest {
         app2.setProperty("price", 0.99);
         app2.setProperty("rating", 3.6); 
         app2.setProperty("rated", "Everyone");
-        datastore.put(app2); 
 
         entities.add(app1);
         entities.add(app2);
