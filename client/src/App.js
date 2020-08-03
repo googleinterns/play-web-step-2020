@@ -29,9 +29,10 @@ class App extends Component {
     return (
       <div className='App'>
         <Header />
-        <AppOfTheWeek />
         {this.state.streamData.clusters.map((cluster) => {
             switch(cluster.type) {
+            case "AppOfTheWeekCluster":
+                return <AppOfTheWeek data={cluster} key={cluster.id} />
             case "StandardCluster":
                 return <StandardCluster data={cluster} key={cluster.id} />
             case "TopCharts":

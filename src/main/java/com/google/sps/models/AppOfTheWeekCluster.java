@@ -2,6 +2,7 @@ package com.google.sps.models;
 
 public class AppOfTheWeekCluster extends Cluster {
     private String title = "Wear OS app of the week";
+    private Card card;
 
     AppOfTheWeekCluster() {
         makeCluster();
@@ -13,6 +14,10 @@ public class AppOfTheWeekCluster extends Cluster {
         return this.title;
     }
 
+    public Card getCard() {
+        return this.card;
+    }
+
     public String getType() {
         return "AppOfTheWeekCluster";
     }
@@ -22,8 +27,8 @@ public class AppOfTheWeekCluster extends Cluster {
     }
     
     public void makeCluster() {
-        App mockApp = new App.Builder("1").setTitle("mockApp").setUrl("mockIcon.png").setCategory("Fake Apps").setRating(5).setRated("Everyone").setAppDescription("mock app description").setDeveloper("Mock Developer").setReview("11K reviews").build();
-        Card mockCard = new Card("mockCard", "https://mockBigImageUrl.com", mockApp);
+        App mockApp = new App.Builder("1").setTitle("mockApp").setUrl("/images/emptyAppIcon.jpeg").setRating(5).setRated("Everyone").setAppDescription("mock app description").setDeveloper("Mock Developer").setReview("11K reviews").build();
+        card = new Card("mockCard", "https://mockBigImageUrl.com", mockApp);
 
     }
 }
