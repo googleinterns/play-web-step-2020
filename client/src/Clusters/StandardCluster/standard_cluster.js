@@ -7,7 +7,7 @@ import './StandardClusterStyle.css';
 class StandardCluster extends Component {
     render() {
         const makeRow = item => (
-            <div key={item.id}>
+            <div className="col-card" key={item.id}>
                 <SingleCardContainer
                 bigImageUrl={item.bigImageUrl}
                 title={item.app.title}
