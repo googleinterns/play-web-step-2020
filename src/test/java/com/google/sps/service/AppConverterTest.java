@@ -17,7 +17,6 @@ package com.google.sps.service;
 import com.google.sps.service.AppConverter;
 import com.google.sps.models.App;
 import com.google.appengine.api.datastore.Entity;
-import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -30,7 +29,7 @@ import static org.junit.Assert.assertEquals;
 public final class AppConverterTest {
   // LocalServiceTestHelper is needed in order to avoid 'no API environment' error
   private static final LocalServiceTestHelper helper =
-      new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig().setDefaultHighRepJobPolicyUnappliedJobPercentage(0));
+      new LocalServiceTestHelper();
 
     @BeforeClass
     public static void setup() {
