@@ -28,6 +28,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 public final class AppConverterTest {
+  // LocalServiceTestHelper is needed in order to avoid 'no API environment' error
   private static final LocalServiceTestHelper helper =
       new LocalServiceTestHelper(new LocalDatastoreServiceTestConfig().setDefaultHighRepJobPolicyUnappliedJobPercentage(0));
 

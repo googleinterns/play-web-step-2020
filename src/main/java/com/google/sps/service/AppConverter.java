@@ -5,7 +5,7 @@ import com.google.appengine.api.datastore.Entity;
 import java.util.ArrayList;
 import java.util.List;
 
-class AppConverter {
+public class AppConverter {
     
     public List<App> convertToApp(List<Entity> appEntities) {
         ArrayList<App> apps = new ArrayList<App>();
