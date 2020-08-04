@@ -27,22 +27,24 @@ class App extends Component {
         return null;
     }
     return (
-      <div className='App'>
+      <div className='app'>
         <Header />
-        {this.state.streamData.clusters.map((cluster) => {
-            switch(cluster.type) {
-            case "AppOfTheWeekCluster":
-                return <AppOfTheWeek data={cluster} key={cluster.id} />
-            case "StandardCluster":
-                return <StandardCluster data={cluster} key={cluster.id} />
-            case "TopCharts":
-                return <TopCharts data={cluster} key={cluster.id} />
-            case "RecommendedCategories":
-                return <RecommendedCategories data={cluster} key={cluster.id} />
-            default:
-                return null;
-        }
-        })}
+        <div className='clusters'>
+            {this.state.streamData.clusters.map((cluster) => {
+                switch(cluster.type) {
+                case "AppOfTheWeekCluster":
+                    return <AppOfTheWeek data={cluster} key={cluster.id} />
+                case "StandardCluster":
+                    return <StandardCluster data={cluster} key={cluster.id} />
+                case "TopCharts":
+                    return <TopCharts data={cluster} key={cluster.id} />
+                case "RecommendedCategories":
+                    return <RecommendedCategories data={cluster} key={cluster.id} />
+                default:
+                    return null;
+                }
+            })}
+        </div>
         <Footer />
       </div>
     );

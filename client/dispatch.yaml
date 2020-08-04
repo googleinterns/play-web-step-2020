@@ -4,8 +4,11 @@ dispatch:
 # Route the urls that point to the Java backend's API calls
  - url: "*/api/v1/*"
    service: backend
+
+# Route all static image urls to the Java backend
+ - url: "*/images/*"
+   service: backend
    
 # Route all other urls to the React.js frontend
  - url: "*/*"
    service: default
-   

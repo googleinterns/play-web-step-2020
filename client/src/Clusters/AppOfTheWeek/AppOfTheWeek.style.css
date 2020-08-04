@@ -1,21 +1,116 @@
 .app-of-the-week {
-    background-image: 
-        linear-gradient(to right, #C4E9DE 1%, #F0F9F700), 
-            url(./Images/background-image.jpg);
-    text-align: left;
-    margin: 100px;
-    padding: 20px;
-    border-radius: 30px;
-    background-size: cover;
+    border-radius: 24px;
+    filter: drop-shadow(0px 2px 6px rgba(60, 64, 67, 0.15)), drop-shadow(0px 1px 2px rgba(60, 64, 67, 0.3)), drop-shadow(0px 4px 8px rgba(128, 134, 139, 0.06)), drop-shadow(0px -2px 8px rgba(128, 134, 139, 0.09));
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    width: 1136px;
 }
 
-.app-of-the-week .text {
-    color: #2E4057;
-    width: 40%;
+.app-of-the-week .container {
+    background: linear-gradient(90deg, #D5E2EA 50%, rgba(213, 226, 234, 0) 80%);
+    height: 100%;
+    padding: 56px 40px 40px 40px;
+}
+
+.app-of-the-week .background-img {
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.app-of-the-week .header {
+    color: #202124;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 52px;
+}
+
+.app-of-the-week .description {
+    color: #202124;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+    line-height: 24px;
+    margin-top: 16px;
+    width: 472px;
+}
+
+.app-of-the-week .container .icon-list {
+    align-items: center;
+    display: flex;
+    margin-top: 44px;
+    position: relative;
+    width: 100%;
 }
 
 .app-of-the-week .icon-img {
-    height: 80px;
-    width: 80px;
-    border-radius: 20px;
+    border-radius: 12px;
+    bottom: 16.67%;
+    left: 0%;
+    margin-bottom: 30px;
+    margin-right: 16px;
+    position: relative;
+    right: 84.91%;
+    top: 16.67%;
+}
+
+.app-of-the-week .content .app-name {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.app-of-the-week .developer {
+    color: #5F6368;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+}
+
+.app-of-the-week .reviewContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 14px;
+}
+
+.app-of-the-week .review-content {
+    text-align: center;
+}
+
+.app-of-the-week .review-content .rating {
+    font-size: 14px;    
+}
+
+.app-of-the-week .review-content .rating-star-icon {
+    margin-left: 3px;
+}
+
+.app-of-the-week .review-content .reviews {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 5.5px;
+}
+
+.app-of-the-week .rated-content {
+    align-self: center;
+}
+
+.app-of-the-week .rated-content .rated {
+    font-size: 12px;
+    line-height: 16px;
+    margin-right: 30px;
+}
+
+.app-of-the-week .line {
+    border-right: 1px solid black;
+    margin-left: 25.67px;
+    margin-right: 24.33px;
+}
+
+.app-of-the-week .button {
+    margin-right: 64.66px;
 }
