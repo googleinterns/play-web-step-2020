@@ -16,28 +16,31 @@ class AppOfTheWeek extends Component {
             <p className="description">{data.card.app.appDescription}</p>
             <div className="icon-list">
               <img className="icon-img" alt="Strata Icon" src={data.card.app.url}/>
-              <h3 className="app-name">{data.card.app.title}</h3> 
-              <div className="developer">{data.card.app.developer}</div>
-            </div>
-          </div>
-          <div className="decide-bar-container">
-            <div className="content">
-              <div className="primary">
-                {data.card.app.rating}
-                <img 
-                  className="rating-star-icon"
-                  alt="rating star"
-                  src={starIcon}
-                />
+              <div>
+                <h3 className="app-name">{data.card.app.title}</h3> 
+                <div className="developer">{data.card.app.developer}</div>
               </div>
-              <div className="secondary">{data.card.app.review}</div>
-                <div className="content">
-                  <div className="secondary">{data.card.app.rated}</div>
+            </div>
+
+            <div className="decide-bar-container">
+              <div className="content">
+                <div className="primary">
+                  {data.card.app.rating}
+                  <img 
+                    className="rating-star-icon"
+                    alt="rating star"
+                    src={starIcon}
+                  />
                 </div>
-                <Button variant="outlined">Install</Button>
+                <div className="secondary">{data.card.app.review}</div>
               </div>
+              <div className="content">
+                <div className="secondary">{data.card.app.rated}</div>
+              </div>
+              <Button variant="outlined">Install</Button>
             </div>
           </div>
+        </div>
       );
   }
 }
