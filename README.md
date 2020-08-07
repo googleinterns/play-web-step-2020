@@ -21,7 +21,7 @@ with clusters of apps. There will be several different kinds of clusters, such a
 
 - On the root directory, run `yarn`.
 
-## Steps to Run the Java Servet
+## Steps to Run the Java Servlet
 
 - On the root directory, run `mvn package appengine:run`.
 
@@ -44,6 +44,10 @@ Allows the developer to build the app for production to the build folder. It cor
 1. On the root directory, run `yarn build`.
 2. Then run `gloud app deploy client`.
 3. The URL of the deployed service will be displayed on the terminal
+
+## Steps to Re-deploy the dispatch file
+
+- On the root directory, run `gcloud app deploy client/dispatch.yaml`.
 
 ## Tests
 
